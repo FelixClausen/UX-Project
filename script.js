@@ -4,6 +4,9 @@ console.log("testfile nr 2")
 // switching branches
 // git switch BranchName
 
+// To check which branch you are in
+// git branch
+
 
 // pushing code to github
 // git add .
