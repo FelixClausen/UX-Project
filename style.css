@@ -3,10 +3,7 @@ body {
 	font-size: 1.2em;
 }
 
-table {
-	border: 1px solid #000;
-}
-
-table th {
-	padding: 10px;
+div {
+	background-color: crimson;
+	opacity: 20%;
 }
