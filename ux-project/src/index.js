@@ -5,6 +5,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
+
+//import '/Users/Felix/Documents/#homework/UX-Design/UX-Project/ux-project/node_modules/bootstrap/dist/css/bootstrap.css';
 
 // all components
 ReactDOM.render(
@@ -39,3 +43,5 @@ reportWebVitals();
 // updating merged code from github //
 // git fetch
 // git rebase origin/Master
+
+console.log("working?")
