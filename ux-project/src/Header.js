@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function Header() {
   return (
     <nav className="navbar navbar-light bg-gradient-light">
       {/* logo + name container */}
@@ -36,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default Header;
