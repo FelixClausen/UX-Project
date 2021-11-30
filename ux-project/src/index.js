@@ -3,16 +3,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import Header from './Header';
+import IndexCardWrapper from './indexCardWrapper'
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-
-//import '/Users/Felix/Documents/#homework/UX-Design/UX-Project/ux-project/node_modules/bootstrap/dist/css/bootstrap.css';
 
 // all components
 ReactDOM.render(
   <React.StrictMode>
     <Header />
+    <IndexCardWrapper />
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -22,9 +22,10 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
+console.log("still working !?")
 
 
-// useful commands for using git
+//*******************************************   useful commands for using git   ******************************************************************//
 
 // switching branches //
 // git switch BranchName
@@ -43,4 +44,4 @@ reportWebVitals();
 // git fetch
 // git rebase origin/Master
 
-console.log("working?")
+// components need to start with uppercase letters (?) //

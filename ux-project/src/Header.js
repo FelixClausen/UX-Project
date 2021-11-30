@@ -13,8 +13,8 @@ function Header() {
           </p>
         </div>
         {/* navigation container */}
-        <ul className="nav justify-content-center">
-          <li className="nav-item">
+        <ul className="nav-item">
+          <li>
             <p className="nav-link active" aria-current="page">Link</p>
           </li>
           <li className="nav-item">

@@ -1,11 +1,14 @@
+/* ----- import font + resets -----*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
 
+/* ----- header -----*/
 .navbar {
 	margin: 2rem;
 }
@@ -26,6 +29,10 @@
 	margin-top: -0.4rem;
 }
 
+.navbar ul {
+	display: flex;
+	list-style: none;
+}
 .nav-item p {
 	color: #495464;
 	margin-top: -0.7rem;
@@ -34,4 +41,78 @@
 
 form {
 	margin-top: -1.5rem;
+}
+
+/* ----- index -----*/
+
+.indexWrapper {
+	margin-top: 10rem;
+}
+
+.indexCardTitle {
+	font-size: 3em;
+	font-weight: 700;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1050px;
+}
+
+.CardWrapper {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+
+	position: relative;
+	text-align: left;
+}
+
+.break {
+	flex-basis: 100%;
+	height: 0;
+}
+
+.card {
+	flex-grow: 1;
+	height: 564px;
+	background-image: url(/src/images/image_one.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 1rem;
+}
+
+.card-title {
+	font-size: 2em;
+	font-weight: 700;
+	position: absolute;
+	bottom: 70px;
+	left: 16px;
+}
+
+.card-text {
+	font-size: 1.2em;
+	min-width: 150px;
+	max-width: 280px;
+	position: absolute;
+	bottom: 2px;
+	left: 16px;
+}
+
+.card button {
+	width: 10rem;
+	height: 3rem;
+	background-color: #495464;
+	color: #eee;
+	border: #eee;
+	position: absolute;
+	bottom: 14px;
+	right: 16px;
+}
+
+.card button:hover {
+	background-color: #eee;
+	color: #181818;
 }
