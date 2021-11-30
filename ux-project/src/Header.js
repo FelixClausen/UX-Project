@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import React from 'react'
 import './App.css';
 
 function Header() {
@@ -29,7 +30,6 @@ function Header() {
         {/* quick search container */}
         <form className="d-flex">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-          <button type="button" class="btn btn-outline-dark">Search</button>
         </form>
       </div>
     </nav>

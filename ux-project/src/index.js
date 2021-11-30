@@ -1,8 +1,7 @@
 // importing ´container´ components
 
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
-import './index.css';
 import Header from './Header';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
