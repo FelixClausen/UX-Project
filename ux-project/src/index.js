@@ -1,18 +1,24 @@
 // importing ´container´ components
-
 import React from 'react'
 import ReactDOM from 'react-dom';
-import Header from './Header';
-import IndexCardWrapper from './indexCardWrapper'
+import HeaderComp from './HeaderComp.jsx';
+import IndexCardWrapper from './indexCardWrapper';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import InfoBox from './InfoBox.jsx';
+import InfoBoxList from './InfoBoxList.jsx';
+
+
+import App from './App.js'
 
 // all components
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+    <HeaderComp />
     <IndexCardWrapper />
+    <InfoBox />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

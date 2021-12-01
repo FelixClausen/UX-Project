@@ -1,5 +1,10 @@
 import './App.css';
+import React from 'react'
+
 import { BsArrowRightShort } from "react-icons/bs";
+
+// en mer permanent lösning behövs,
+// både vad gäller komponenthantering och bild användning
 
 function IndexCard() {
   return (
@@ -21,7 +26,6 @@ function IndexCard() {
           <button type="button" className="btn btn-outline-dark">Read more <BsArrowRightShort /></button>
         </div>
       </div>
-      {/* a div to break the line (makes the cards go down after 2 cards / line) */}
       <div className="break"></div>
     </div>
   );

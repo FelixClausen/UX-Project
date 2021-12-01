@@ -37,16 +37,22 @@
 	color: #495464;
 	margin-top: -0.7rem;
 	padding-left: 20px;
+	font-size: 1.2em;
 }
 
 form {
 	margin-top: -1.5rem;
+	width: 270px;
 }
 
 /* ----- index -----*/
 
 .indexWrapper {
-	margin-top: 10rem;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	width: 1070px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .indexCardTitle {
@@ -59,7 +65,6 @@ form {
 }
 
 .CardWrapper {
-	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -77,7 +82,7 @@ form {
 .card {
 	flex-grow: 1;
 	height: 564px;
-	background-image: url(/src/images/image_one.jpeg);
+	background-image: url('./images/image_one.jpeg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -115,4 +120,79 @@ form {
 .card button:hover {
 	background-color: #eee;
 	color: #181818;
+}
+
+/* ----- InfoBoxes -----*/
+
+.InfoBox {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1050px;
+	display: flex;
+
+	margin-bottom: 10rem;
+}
+
+.InfoBoxTextWrapper {
+	margin-right: 2rem;
+	margin-top: 2rem;
+}
+.InfoBoxTitle {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.InfoBoxText {
+	width: 500px;
+	font-size: 16px;
+}
+
+.InfoBoxImage {
+	margin-left: 1rem;
+	width: 50%;
+	height: 300px;
+}
+
+.InfoBoxListImage {
+	margin-right: 0rem;
+	width: 50%;
+	height: 300px;
+}
+
+.InfoBoxImpact {
+	margin-left: 2rem;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.InfoBoxImpactList {
+	margin-left: 2rem;
+	margin-top: 1rem;
+}
+
+.InfoBoxImpactList li {
+	list-style: none;
+	display: flex;
+	line-height: 4rem;
+}
+
+.InfoBoxImpactList li h4 {
+	padding-right: 10px;
+	font-size: 20px;
+}
+
+.InfoBoxImpactList li p {
+	font-size: 16px;
+	line-height: normal;
+}
+
+/* ----- Graph -----*/
+
+.App {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1050px;
+	height: 500px;
+
+	margin-bottom: 10rem;
 }
