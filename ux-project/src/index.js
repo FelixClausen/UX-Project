@@ -1,15 +1,14 @@
 // importing ´container´ components
 import React from 'react'
 import ReactDOM from 'react-dom';
-import HeaderComp from './HeaderComp.jsx';
+import HeaderComp from './HeaderComp';
 import IndexCardWrapper from './indexCardWrapper';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import InfoBox from './InfoBox.jsx';
-import InfoBoxList from './InfoBoxList.jsx';
 
-
+import App2 from './CompareData';
 import App from './App.js'
 
 // all components
@@ -19,6 +18,7 @@ ReactDOM.render(
     <IndexCardWrapper />
     <InfoBox />
     <App />
+    <App2 />
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -31,7 +31,7 @@ reportWebVitals();
 console.log("still working !?")
 
 
-//*******************************************   useful commands for using git   ******************************************************************//
+//**********  useful commands for using git  **********//
 
 // switching branches //
 // git switch BranchName
@@ -51,3 +51,8 @@ console.log("still working !?")
 // git rebase origin/Master
 
 // components need to start with uppercase letters (?) //
+
+
+//**********  use these principles  **********//
+
+// life-cicle hooks

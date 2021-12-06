@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 
-import ListComp from './NavListComp';
+import NavListComp from './NavListComp';
 import LogoComp from './LogoComp';
 import SearchComp from './SearchComp';
 
@@ -12,7 +12,7 @@ function HeaderComp() {
       <div className="container-fluid">
         <LogoComp />
         {/* navigation container */}
-        <ListComp />
+        <NavListComp />
         {/* quick search container */}
         <SearchComp />
       </div>
