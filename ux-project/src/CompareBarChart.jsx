@@ -71,4 +71,3 @@ const MyBarChart = (props) => {
 
 
 export default MyBarChart
-

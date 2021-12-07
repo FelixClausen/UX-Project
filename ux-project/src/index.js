@@ -1,17 +1,19 @@
-// importing ´container´ components
+// react
 import React from 'react'
 import ReactDOM from 'react-dom';
+
+// css
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
+// components
 import HeaderComp from './HeaderComp';
 import IndexCardWrapper from './indexCardWrapper';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
 import InfoBox from './InfoBox.jsx';
-
-import App2 from './CompareData';
 import App from './App.js'
+import App2 from './CompareData';
 
-// all components
+// render components in root
 ReactDOM.render(
   <React.StrictMode>
     <HeaderComp />
@@ -22,11 +24,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
 
 console.log("still working !?")
 
@@ -55,4 +52,4 @@ console.log("still working !?")
 
 //**********  use these principles  **********//
 
-// life-cicle hooks
+// life-cicle hooks for displaying the right content, use it as navigation
