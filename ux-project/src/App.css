@@ -18,6 +18,9 @@
 	font-size: 1.4em;
 	font-weight: 700;
 	text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .navbar-brand span {
@@ -30,20 +33,22 @@
 	margin-top: -0.4rem;
 }
 
-.navbar ul {
-	display: flex;
-	list-style: none;
-}
-.nav-item p {
-	color: #495464;
-	margin-top: -0.7rem;
-	padding-left: 20px;
+.navTest {
 	font-size: 1.2em;
+	margin-bottom: 5rem;
+	display: inline-flex;
+	width: 100px;
+}
+
+.nav-item li a {
+	color: #495464;
 }
 
 form {
-	margin-top: -1.5rem;
 	width: 270px;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 /* ----- index -----*/
@@ -135,7 +140,6 @@ form {
 }
 
 .InfoBoxTextWrapper {
-	margin-right: 2rem;
 	margin-top: 2rem;
 }
 .InfoBoxTitle {
@@ -172,8 +176,6 @@ form {
 }
 
 .InfoBoxImpactList li {
-	list-style: none;
-	display: flex;
 	line-height: 4rem;
 }
 

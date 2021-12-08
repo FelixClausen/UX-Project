@@ -7,20 +7,20 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // components
+//import HeaderComp from './HeaderComp';
+//import IndexCardWrapper from './indexCardWrapper';
+//import InfoBox from './InfoBox.jsx';
+//import App from './App.js'
+//import App2 from './CompareData';
+import RouterStructure from "./routerStructure";
 import HeaderComp from './HeaderComp';
-import IndexCardWrapper from './indexCardWrapper';
-import InfoBox from './InfoBox.jsx';
-import App from './App.js'
-import App2 from './CompareData';
+import LogoComp from './LogoComp';
+import SearchComp from './SearchComp';
 
 // render components in root
 ReactDOM.render(
   <React.StrictMode>
     <HeaderComp />
-    <IndexCardWrapper />
-    <InfoBox />
-    <App />
-    <App2 />
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -53,3 +53,6 @@ console.log("still working !?")
 //**********  use these principles  **********//
 
 // life-cicle hooks for displaying the right content, use it as navigation
+// or stack native
+
+// nvm use router

@@ -9,13 +9,11 @@ function HeaderComp() {
   return (
     <nav className="navbar navbar-light bg-gradient-light">
       {/* logo + name container */}
-      <div className="container-fluid">
-        <LogoComp />
+      <LogoComp />
         {/* navigation container */}
         <NavListComp />
         {/* quick search container */}
         <SearchComp />
-      </div>
     </nav>
   );
 }
