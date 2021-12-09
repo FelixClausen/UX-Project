@@ -16,11 +16,13 @@ import RouterStructure from "./routerStructure";
 import HeaderComp from './HeaderComp';
 import LogoComp from './LogoComp';
 import SearchComp from './SearchComp';
+import FontSizeChanger from './components/FontSizeChanger'; // Placeras här temporärt för display
 
 // render components in root
 ReactDOM.render(
   <React.StrictMode>
     <HeaderComp />
+    <FontSizeChanger />
   </React.StrictMode>,
   document.getElementById('root')
 );
