@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+/* Notera att koden just nu är endast för display, 
+komponenten kommer att appliceras på text på samtliga sidor */
+
 function FontSizeChanger() {
   const [fontSize, setFontSize] = useState(16);
   
