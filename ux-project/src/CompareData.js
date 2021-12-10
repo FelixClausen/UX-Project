@@ -1,11 +1,14 @@
 // react
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 
-// imports css
+// css
 import "./App.css";
 
-// imports charts
+// components
 import MyBarChart from "./CompareBarChart";
+import InfoBoxText from "./InfoBoxText";
+import InfoBoxList from "./InfoBoxList";
 
 // import seperate file that holds and wrapps data
 import { getCO2Emissionsdata } from "./data/CO2Emission";
@@ -34,13 +37,17 @@ const App2 = () => {
           break;
       }
     } else {
+      // alert the user if no data found
       alert("Year could not be found.");
     }
   };
 
-  // return the actual chart
+  // return the actual charts
   return (
     <div className="App">
+      <Link to="/">
+        <button type="button" className="btn btn-outline-dark">Read more</button>
+      </Link>
       <h1>Global CO2 Emission</h1>
       <MyBarChart
         chartName="Pie1"
@@ -52,6 +59,12 @@ const App2 = () => {
         Co2Emission={Co2Emission[indexYear2]}
         onYearFilter={handleYearFilter}
       />
+      <InfoBoxText />
+      <InfoBoxText />
+      <InfoBoxList />
+      <Link to="/">
+        <button type="button" className="btn btn-outline-dark">Read more</button>
+      </Link>
     </div>
   );
 }

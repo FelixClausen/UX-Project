@@ -1,3 +1,4 @@
+// react + components from recharts
 import React from "react";
 import {
   BarChart,
@@ -9,30 +10,32 @@ import {
   CartesianGrid
 } from "recharts";
 
-
+// compare data function
 const MyBarChart = (props) => {
-
+  // runs handleYear based on "Enter" key pressed + value
   const handleYear = e => {
     if (e.key === "Enter") {
       props.onYearFilter(props.chartName, e.target.value);
-      console.log(e.target.value);
     }
   };
 
+  // sets Co2Emission to co2
   let co2 = props.Co2Emission;
+  // if data is undefined, show error message
   if (co2 === undefined) return <p>There is no data.</p>;
 
-  //object array eller Arrays of object
+  //object array
   const dataBarChart = [
     { name: "Gas", CO2: parseInt(co2["Gas Fuel"]) },
     { name: "Liq", CO2: co2["Liquid Fuel"] },
     { name: "Sol", CO2: co2["Solid Fuel"] },
     { name: "Cem", CO2: co2["Cement"] }
   ];
+
+  // sets some colors, they are used later as Cell-color
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#BB8042"];
 
-  console.log(co2);
-
+  // returns a div to show the graphs
   return (
     <div style={{ width: "350px", height: "400px", float: "right" }}>
       <input

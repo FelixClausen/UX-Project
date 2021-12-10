@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import {
   LineChart,
   Line,
-  BarChart,
-  Bar,
-  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   Legend,
-  ReferenceLine,
   ResponsiveContainer,
 } from 'recharts';
 
@@ -19,18 +15,15 @@ export default class CO2Emission extends Component {
   render() {
     return (
       <ResponsiveContainer width="100%" height="100%">
-
       <LineChart
-          width={500}
-          height={300}
           data={data}
           margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
+            top: 0,
+            right: 5,
+            left: -20,
+            bottom: -25,
           }}
-        > <CartesianGrid strokeDasharray="0" />
+        >
           <XAxis dataKey="Year" />
           <YAxis />
           <Tooltip />
@@ -45,8 +38,7 @@ export default class CO2Emission extends Component {
   }
 }
 
-//
-//
+// data from url set to an array
 const data = [
   {
       Cement: 0.0,

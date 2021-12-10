@@ -1,23 +1,23 @@
-import './App.css';
+// react
 import React from 'react'
+
+// css
+import './App.css';
+
+// components
 import IndexCard from './indexCard';
 
+// function to show container component
 function IndexCardWrapper() {
   return (
-<div className="indexWrapper">
-  <h3 className="indexCardTitle">Vårt klimat</h3>
-  <IndexCard />
-  <IndexCard />
-</div>
+    <div className="indexWrapper">
+      {/* Section title */}
+      <h3 className="indexCardTitle">Vårt klimat</h3>
+      {/* Uses components */}
+      <IndexCard />
+      <IndexCard />
+    </div>
   );
 }
 
 export default IndexCardWrapper;
-
-/*
-<div className="indexWrapper">
-  <h3 className="indexCardTitle">Vårt klimat</h3>
-  <IndexCard />
-  <IndexCard />
-</div>
-*/

@@ -7,15 +7,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // components
-//import HeaderComp from './HeaderComp';
-//import IndexCardWrapper from './indexCardWrapper';
-//import InfoBox from './InfoBox.jsx';
-//import App from './App.js'
-//import App2 from './CompareData';
-import RouterStructure from "./routerStructure";
 import HeaderComp from './HeaderComp';
-import LogoComp from './LogoComp';
-import SearchComp from './SearchComp';
 
 // render components in root
 ReactDOM.render(
@@ -25,9 +17,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-console.log("still working !?")
-
-
 //**********  useful commands for using git  **********//
 
 // switching branches //
@@ -36,19 +25,16 @@ console.log("still working !?")
 // To check which branch you are in //
 // git branch
 
-
 // pushing code to github //
 // git add .
 // git commit -m "comment here"
 // git push
-
 
 // updating merged code from github //
 // git fetch
 // git rebase origin/Master
 
 // components need to start with uppercase letters (?) //
-
 
 //**********  use these principles  **********//
 
