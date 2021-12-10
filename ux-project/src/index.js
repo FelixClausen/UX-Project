@@ -8,22 +8,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 // components
 import HeaderComp from './HeaderComp';
-<<<<<<< HEAD
-=======
-import LogoComp from './LogoComp';
-import SearchComp from './SearchComp';
-import FontSizeChanger from './components/FontSizeChanger'; // Placeras här temporärt för display
->>>>>>> 1786af91f3c81f90aac88306893894976bf2e36d
+//import FontSizeChanger from './components/FontSizeChanger'; // Placeras här temporärt för display
+
 
 // render components in root
 ReactDOM.render(
   <React.StrictMode>
     <HeaderComp />
-    <FontSizeChanger />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
+
+//    <FontSizeChanger />
 //**********  useful commands for using git  **********//
 
 // switching branches //

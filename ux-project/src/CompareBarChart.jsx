@@ -37,22 +37,27 @@ const MyBarChart = (props) => {
 
   // returns a div to show the graphs
   return (
-    <div style={{ width: "350px", height: "400px", float: "right" }}>
-      <input
+    <div className="barBox">
+      <div>
+        <input
         type="text"
         placeholder="Year..."
         onKeyDown={e => handleYear(e)}
       />
+      <button onclick={e => handleYear(e)}>Search</button>
+
+      </div>
+
 
       <BarChart
-        width={350}
-        height={400}
+        width={400}
+        height={300}
         data={dataBarChart}
         margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5
+          top: 0,
+          right: 0,
+          left: 0,
+          bottom: 0,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />

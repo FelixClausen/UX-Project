@@ -44,27 +44,27 @@ const App2 = () => {
 
   // return the actual charts
   return (
-    <div className="App">
+    <div className="customBTN center">
       <Link to="/">
-        <button type="button" className="btn btn-outline-dark">Read more</button>
+        <button type="button" className="btn btn-outline-dark">Go back</button>
       </Link>
-      <h1>Global CO2 Emission</h1>
-      <MyBarChart
-        chartName="Pie1"
-        Co2Emission={Co2Emission[indexYear1]}
-        onYearFilter={handleYearFilter}
-      />
-      <MyBarChart
-        chartName="Pie2"
-        Co2Emission={Co2Emission[indexYear2]}
-        onYearFilter={handleYearFilter}
-      />
-      <InfoBoxText />
-      <InfoBoxText />
+      <h1>Jämför tidigare väderdata</h1>
+      <div className="App compareBars">
+        <MyBarChart
+          chartName="Pie1"
+          Co2Emission={Co2Emission[indexYear1]}
+          onYearFilter={handleYearFilter}
+        />
+        <MyBarChart
+          chartName="Pie2"
+          Co2Emission={Co2Emission[indexYear2]}
+          onYearFilter={handleYearFilter}
+        />
+      </div>
+      <div>
       <InfoBoxList />
-      <Link to="/">
-        <button type="button" className="btn btn-outline-dark">Read more</button>
-      </Link>
+      <InfoBoxList />
+      </div>
     </div>
   );
 }
