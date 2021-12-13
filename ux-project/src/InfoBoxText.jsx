@@ -4,10 +4,6 @@ import React from 'react';
 // css
 import './App.css';
 
-// images
-import imageOne from './images/image_one.jpeg';
-import randomImg from './images/randomImg.jpg';
-
 const InfoBoxText = ({ blogs, img}) => {
   return (
     <div className='InfoBox'>
@@ -19,7 +15,7 @@ const InfoBoxText = ({ blogs, img}) => {
             <p className="InfoBoxText"> {blog.body} </p>
             <p className="InfoBoxText"> {blog.body} </p>
           </div>
-          <img className="InfoBoxImage rounded float-right" src={blog.img} ></img>
+          <img className="InfoBoxImage rounded float-right" src={blog.img} alt='alt'></img>
         </div>
       ))}
       </div>

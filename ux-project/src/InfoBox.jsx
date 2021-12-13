@@ -1,9 +1,11 @@
 // react
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from "react";
 
 // css
 import './App.css';
+import './responsive.css'
 
 // components
 import InfoBoxText from "./InfoBoxText";
@@ -11,52 +13,63 @@ import InfoBoxList from './InfoBoxList';
 import Graph from "./Graph";
 
 // images
-import imageOne from './images/image_one.jpeg';
-import randomImg from './images/randomImg.jpg';
-
-import { useState } from "react";
-
+import fossilFuel from './images/fossilFuel.jpg';
+import globalTemperature from './images/globalTemperature.jpg';
+import glaciersSize from './images/glaciersSize.jpeg';
+import seaLevels from './images/seaLevels.jpg';
 
 
 // gjorde om funktionen för att göra den mer anpassningsbar samt så att den går att återanvända med nytt innehåll.
-// vi behöver dock på något vis visa rätt information/graf när användaren går vidare till ett specifikt ämne
+// vi behöver dock på något vis visa rätt information/graf när användaren går vidare till ett specifikt ämne,
+// just nu visas bara all random data som vi har
 const InfoBox = () => {
-  const [blogs, setBlogs] = useState([
+  const [data] = useState([
     { title: 'Fossil Fuel',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: randomImg,
+      img: fossilFuel,
       id: 1
     },
   ])
-  const [waters, setWaters] = useState([
-    { title: 'Water',
+
+  const [waterLevels] = useState([
+    { title: 'Sea Levels',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: imageOne,
+      img: seaLevels,
       id: 2
     },
 
   ])
-  const [randoms, setRandoms] = useState([
-    { title: 'Random',
+
+  const [globalTemperatures] = useState([
+    { title: 'Global Temperature',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: randomImg,
+      img: globalTemperature,
       id: 3
     },
+  ])
 
+  const [glaciersSizes] = useState([
+    { title: 'Glaciers Size',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
+      img: glaciersSize,
+      id: 4
+    },
   ])
 
   return (
     <div className="customBTN">
       <Link to="/">
-        <button type="button" className="customBTN btn btn-outline-dark">Go back</button>
+        <button type="button" className="customBTN show btn btn-outline-dark">Go back</button>
       </Link>
-      <InfoBoxText blogs={blogs} />
+      <InfoBoxText blogs={data} />
       <InfoBoxList />
       <Graph />
-      <InfoBoxText blogs={randoms} />
+      <InfoBoxText blogs={waterLevels} />
       <InfoBoxList />
+      <InfoBoxText blogs={globalTemperatures} />
+      <InfoBoxText blogs={glaciersSizes} />
       <Link to="/">
-        <button type="button" className="customBTN btn btn-outline-dark">Go back</button>
+        <button type="button" className="customBTN show btn btn-outline-dark">Go back</button>
       </Link>
     </div>
   );

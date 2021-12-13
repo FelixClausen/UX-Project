@@ -1,0 +1,41 @@
+@media only screen and (max-width: 1000px) {
+	.nav-item {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.nav-item li {
+		background-color: #e8e8e8;
+		height: 80px;
+		width: 150px;
+		border: 1px solid #181818;
+		display: block;
+	}
+
+	.customBTN {
+		margin-bottom: 10rem;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.hidden {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.show {
+		display: none;
+	}
+
+	.InfoBox {
+		margin-top: 10rem;
+	}
+
+	.customBTN h1 {
+		margin-top: 10rem;
+	}
+}

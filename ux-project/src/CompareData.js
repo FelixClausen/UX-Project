@@ -46,7 +46,7 @@ const App2 = () => {
   return (
     <div className="customBTN center">
       <Link to="/">
-        <button type="button" className="btn btn-outline-dark">Go back</button>
+        <button type="button" className="btn show btn-outline-dark">Go back</button>
       </Link>
       <h1>Jämför tidigare väderdata</h1>
       <div className="App compareBars">
@@ -62,7 +62,6 @@ const App2 = () => {
         />
       </div>
       <div>
-      <InfoBoxList />
       <InfoBoxList />
       </div>
     </div>

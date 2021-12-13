@@ -44,7 +44,7 @@ const MyBarChart = (props) => {
         placeholder="Year..."
         onKeyDown={e => handleYear(e)}
       />
-      <button onclick={e => handleYear(e)}>Search</button>
+      <button onClick={e => handleYear(e)}>Search</button>
 
       </div>
 

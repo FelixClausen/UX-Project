@@ -3,6 +3,7 @@ import React from 'react'
 
 // css
 import './App.css';
+import './responsive.css'
 
 // components
 import NavListComp from './NavListComp';

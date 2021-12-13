@@ -91,7 +91,7 @@ form {
 .card {
 	flex-grow: 1;
 	height: 564px;
-	background-image: url('./images/image_one.jpeg');
+	background-image: url('./images/globalTemperature.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -221,6 +221,7 @@ form {
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 5rem;
 	width: 500px;
 }
 

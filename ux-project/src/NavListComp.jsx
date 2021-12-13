@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // css
 import './App.css';
+import './responsive.css'
 
 // components
 import IndexCardWrapper from './indexCardWrapper';
@@ -19,6 +20,10 @@ function NavListComp() {
       <div>
         <ul className="nav-item nav justify-content-center">
           {/* One "li" per link */}
+          <li className="navTest hidden">
+            {/* Uses Link to navigate through "pages" */}
+            <Link to="/" className="nav-link" aria-current="page">Tillbaka</Link>
+          </li>
           <li className="navTest">
             {/* Uses Link to navigate through "pages" */}
             <Link to="/" className="nav-link" aria-current="page">Home</Link>

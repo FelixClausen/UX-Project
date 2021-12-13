@@ -1,12 +1,11 @@
 // react
 import React from 'react';
-import { useState } from "react";
 
 // css
 import './App.css';
 
 // images
-import logo from './images/image_one.jpeg';
+import logo from './images/globalTemperature.jpg';
 
 // function to show container component
 function InfoBoxList() {
