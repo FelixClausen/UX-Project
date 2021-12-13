@@ -3,16 +3,28 @@
 		position: fixed;
 		left: 0;
 		bottom: 0;
-		width: 100%;
 		overflow: hidden;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.nav-item ul {
+		width: 100%;
 	}
 
 	.nav-item li {
 		background-color: #e8e8e8;
 		height: 80px;
-		width: 150px;
+		width: 180px;
 		border: 1px solid #181818;
 		display: block;
+		margin: 0;
+		overflow: hidden;
+	}
+
+	.nav-link {
+		text-align: center;
+		margin-top: 22px;
 	}
 
 	.customBTN {

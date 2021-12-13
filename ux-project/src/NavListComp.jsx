@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import './responsive.css'
 
+// icons
+import { BsArrowLeftShort } from "react-icons/bs";
+
 // components
 import IndexCardWrapper from './indexCardWrapper';
 import InfoBox from './InfoBox';
@@ -22,7 +25,7 @@ function NavListComp() {
           {/* One "li" per link */}
           <li className="navTest hidden">
             {/* Uses Link to navigate through "pages" */}
-            <Link to="/" className="nav-link" aria-current="page">Tillbaka</Link>
+            <Link to="/" className="nav-link" aria-current="page"><BsArrowLeftShort />Tillbaka</Link>
           </li>
           <li className="navTest">
             {/* Uses Link to navigate through "pages" */}
