@@ -145,14 +145,9 @@ form {
 	width: 400px;
 }
 
-.xx {
-	display: flex;
+.InfoBoxImage {
+	margin-left: 2rem;
 }
-
-.xx img {
-	margin-left: 3rem;
-}
-
 .InfoBoxTextWrapper ul {
 	list-style: none;
 	margin-left: 2rem;
@@ -167,7 +162,7 @@ form {
 .InfoBoxTextWrapper li h4,
 .InfoBoxTextWrapper h3 {
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .InfoBoxTextWrapper h3 {
@@ -208,9 +203,13 @@ form {
 	border: 1px solid #495464;
 }
 
+.blog-preview {
+	display: flex;
+}
+
 /* ----- Graph -----*/
 
-.App {
+.Graph {
 	margin-bottom: 10rem;
 	width: 844px;
 	height: 400px;

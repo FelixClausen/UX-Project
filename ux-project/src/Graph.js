@@ -8,15 +8,15 @@ import './App.css';
 import CO2Emission from './components/LineChart';
 
 // class function to render graph
-class App extends Component {
+class Graph extends Component {
   state={};
 
   render () {
     return (
-      <div className="App">
+      <div className="Graph">
         <CO2Emission />
       </div>
     );
   }
 }
-export default App;
+export default Graph;
