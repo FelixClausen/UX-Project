@@ -23,7 +23,7 @@ import seaLevels from './images/seaLevels.jpg';
 // vi behöver dock på något vis visa rätt information/graf när användaren går vidare till ett specifikt ämne,
 // just nu visas bara all random data som vi har
 const InfoBox = () => {
-  const [data] = useState([
+  const [fossilFuels] = useState([
     { title: 'Fossil Fuel',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
       img: fossilFuel,
@@ -61,7 +61,7 @@ const InfoBox = () => {
       <Link to="/">
         <button type="button" className="customBTN show btn btn-outline-dark">Go back</button>
       </Link>
-      <InfoBoxText blogs={data} />
+      <InfoBoxText blogs={fossilFuels} />
       <InfoBoxList />
       <Graph />
       <InfoBoxText blogs={waterLevels} />

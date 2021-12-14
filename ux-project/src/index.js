@@ -46,3 +46,6 @@ ReactDOM.render(
 // or stack native
 
 // nvm use router
+
+
+// använd samma princip på indexCard som på InfoBoxText

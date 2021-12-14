@@ -4,7 +4,7 @@ import React from 'react';
 // css
 import './App.css';
 
-const InfoBoxText = ({ blogs, img}) => {
+const InfoBoxText = ({ blogs, img }) => {
   return (
     <div className='InfoBox'>
       <div className="InfoBoxTextWrapper">
