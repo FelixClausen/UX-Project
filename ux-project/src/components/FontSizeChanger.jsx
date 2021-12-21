@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 
-/* Notera att koden just nu är endast för display, 
-komponenten kommer att appliceras på text på samtliga sidor */
+/*
+Notera att koden just nu är endast för display,
+komponenten kommer att appliceras på text på samtliga sidor
+*/
 
 function FontSizeChanger() {
   const [fontSize, setFontSize] = useState(16);
-  
+
   return (
     <div className='btnWrapper'>
       <div className='fontSize'>
-        <button className='resizeUp' onClick={() => setFontSize(fontSize + 2)}> 
+        <button className='resizeUp' onClick={() => setFontSize(fontSize + 2)}>
             + Öka storlek
           </button>
           <button className='resizeDown' onClick={() => setFontSize(fontSize - 2)}>
             - Minska storlek
-           </button> 
-        <p 
+           </button>
+        <p
           style={{
             fontSize: `${fontSize}px`
         }}

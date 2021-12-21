@@ -4,14 +4,14 @@ import React from 'react';
 // css
 import './App.css';
 
-const InfoBoxText = ({ blogs, img }) => {
+const InfoBoxText = ({ blogs }) => {
   return (
     <div className='InfoBox'>
       <div className="InfoBoxTextWrapper">
       {blogs.map(blog => (
-        <div className="blog-preview" key={blog.id} >
+        <div className="blog-preview" >
           <div className="textWrapper">
-            <h3 className="InfoBoxTitle">{ blog.title }</h3>
+            <h3 className="InfoBoxTitle"> {blog.title} </h3>
             <p className="InfoBoxText"> {blog.body} </p>
             <p className="InfoBoxText"> {blog.body} </p>
           </div>
@@ -25,11 +25,7 @@ const InfoBoxText = ({ blogs, img }) => {
 
 export default InfoBoxText;
 
-
-
 /*
-
-// function to show container component
 function InfoBoxText() {
   return (
     <div className='xx'>
@@ -50,5 +46,4 @@ function InfoBoxText() {
 }
 
 export default InfoBoxText;
-
 */

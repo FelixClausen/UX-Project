@@ -14,12 +14,17 @@ import IndexCardWrapper from './indexCardWrapper';
 import InfoBox from './InfoBox';
 import App2 from "./CompareData";
 
+/*
+ Lägg till fler ikoner för iPad
+*/
+
+
 // function to show container component
 function NavListComp() {
   return (
-    // router router structure
+    // router structure
     <Router>
-      {/* Classes are from bootstrap */}
+      {/* classes are from bootstrap */}
       <div>
         <ul className="nav-item nav justify-content-center">
           {/* One "li" per link */}
@@ -46,7 +51,7 @@ function NavListComp() {
         </ul>
         {/* Uses "Routes" to contain paths */}
         <Routes>
-          {/* Sets path -> Shows choosen component (should be a container component?) */}
+          {/* Sätter "path" -> Visar vald/a komponenter (borde vara en container-komponent?) */}
           <Route path="/" element={<IndexCardWrapper />}> </Route>
           <Route path="/klimat" element={<InfoBox />}> </Route>
           <Route path="/compare" element={<App2 />}> </Route>

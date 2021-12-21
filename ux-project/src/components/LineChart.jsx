@@ -7,6 +7,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  CartesianGrid
 } from 'recharts';
 
 export default class CO2Emission extends Component {
@@ -14,7 +15,7 @@ export default class CO2Emission extends Component {
   render() {
     return (
       <ResponsiveContainer width="100%" height="100%">
-      <LineChart
+        <LineChart
           data={data}
           margin={{
             top: 0,
@@ -23,16 +24,17 @@ export default class CO2Emission extends Component {
             bottom: -25,
           }}
         >
+          <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="Year" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="Gas Flaring" stroke="red" strokeWidth={1} dot={false} />
-          <Line type="monotone" dataKey="Gas Fuel" stroke="blue" strokeWidth={1} dot={false} />
-          <Line type="monotone" dataKey="Liquid Fuel" stroke="green" strokeWidth={1} dot={false} />
-          <Line type="monotone" dataKey="Solid Fuel" stroke="black" strokeWidth={1} dot={false} />
+          <Line type="monotone" dataKey="Gas Flaring" stroke="red" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="Gas Fuel" stroke="blue" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="Liquid Fuel" stroke="green" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="Solid Fuel" stroke="black" strokeWidth={2} dot={false} />
         </LineChart>
-    </ResponsiveContainer>
+      </ResponsiveContainer>
     );
   }
 }

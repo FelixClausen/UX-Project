@@ -28,7 +28,6 @@ const IndexCardWrapper = () => {
       img: seaLevels,
       id: 2
     },
-
   ])
 
   const [globalTemperatures] = useState([
@@ -50,12 +49,12 @@ const IndexCardWrapper = () => {
   return (
     <div className="indexWrapper">
       {/* Section title */}
-      <h3 className="indexCardTitle">Vårt klimat</h3>
+      <h3 className="indexCardTitle">Vad vill du lära dig mer om?</h3>
       <div className='flex'>
         <div>
-        {/* Uses components */}
-        <IndexCard blogs={fossilFuels}/>
-        <IndexCard blogs={waterLevels}/>
+          {/* Uses components */}
+          <IndexCard blogs={fossilFuels}/>
+          <IndexCard blogs={waterLevels}/>
         </div>
         <div>
           <IndexCard blogs={globalTemperatures}/>
@@ -68,7 +67,6 @@ const IndexCardWrapper = () => {
 
 export default IndexCardWrapper;
 
-// function to show container component
 /*
 function IndexCardWrapper() {
   return (

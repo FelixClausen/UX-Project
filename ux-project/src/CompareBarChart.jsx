@@ -11,7 +11,7 @@ import {
 } from "recharts";
 
 // compare data function
-const MyBarChart = (props) => {
+const CompareBarChart = (props) => {
   // runs handleYear based on "Enter" key pressed + value
   const handleYear = e => {
     if (e.key === "Enter") {
@@ -26,13 +26,13 @@ const MyBarChart = (props) => {
 
   //object array
   const dataBarChart = [
-    { name: "Gas", CO2: parseInt(co2["Gas Fuel"]) },
+    { name: "Gas", CO2: co2["Gas Fuel"] },
     { name: "Liq", CO2: co2["Liquid Fuel"] },
     { name: "Sol", CO2: co2["Solid Fuel"] },
     { name: "Cem", CO2: co2["Cement"] }
   ];
 
-  // sets some colors, they are used later as Cell-color
+  // sets some colors, they are used later as Cell-fill
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#BB8042"];
 
   // returns a div to show the graphs
@@ -41,13 +41,11 @@ const MyBarChart = (props) => {
       <div>
         <input
         type="text"
-        placeholder="Year..."
+        placeholder="1999"
         onKeyDown={e => handleYear(e)}
-      />
-      <button onClick={e => handleYear(e)}>Search</button>
-
+        />
+        <button>Search</button>
       </div>
-
 
       <BarChart
         width={400}
@@ -78,4 +76,4 @@ const MyBarChart = (props) => {
 }
 
 
-export default MyBarChart
+export default CompareBarChart;

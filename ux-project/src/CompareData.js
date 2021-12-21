@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 import "./App.css";
 
 // components
-import MyBarChart from "./CompareBarChart";
-import InfoBoxText from "./InfoBoxText";
+import CompareBarChart from "./CompareBarChart";
 import InfoBoxList from "./InfoBoxList";
 
 // import seperate file that holds and wrapps data
@@ -48,14 +47,14 @@ const App2 = () => {
       <Link to="/">
         <button type="button" className="btn show btn-outline-dark">Go back</button>
       </Link>
-      <h1>Jämför tidigare väderdata</h1>
+      <h1>Vilka årtal vill du jämföra?</h1>
       <div className="App compareBars">
-        <MyBarChart
+        <CompareBarChart
           chartName="Pie1"
           Co2Emission={Co2Emission[indexYear1]}
           onYearFilter={handleYearFilter}
         />
-        <MyBarChart
+        <CompareBarChart
           chartName="Pie2"
           Co2Emission={Co2Emission[indexYear2]}
           onYearFilter={handleYearFilter}

@@ -11,11 +11,11 @@ import { BsArrowRightShort } from "react-icons/bs";
 const IndexCard = ({ blogs }) => {
   return (
     <div>
-      {blogs.map(blog=>
+      {blogs.map(blog =>
         <div className="CardWrapper">
           <div className="card bg-dark text-white">
             <div className="card-img-overlay">
-              <img src={blog.img} className='cardImg' ></img>
+              <img src={blog.img} className='cardImg' alt='alt' ></img>
               <h5 className="card-title">{blog.title}</h5>
               <p className="card-text">{blog.body}</p>
               <Link to="/klimat">
@@ -31,7 +31,6 @@ const IndexCard = ({ blogs }) => {
 
 export default IndexCard;
 
-//function to show component
 /*
 function IndexCard() {
   return (

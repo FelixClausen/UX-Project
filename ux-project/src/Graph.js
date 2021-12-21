@@ -9,8 +9,6 @@ import CO2Emission from './components/LineChart';
 
 // class function to render graph
 class Graph extends Component {
-  state={};
-
   render () {
     return (
       <div className="Graph">

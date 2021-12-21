@@ -5,13 +5,17 @@ import React from 'react';
 import './App.css';
 
 // images
-import logo from './images/globalTemperature.jpg';
+import imageOne from './images/globalTemperature.jpg';
+
+/*
+ Applicera samma princip som på indexCard / InfoBoxText
+*/
 
 // function to show container component
 function InfoBoxList() {
   return (
     <div className="InfoBox">
-      <img src={logo} className="InfoBoxListImage rounded float-right" alt="..."></img>
+      <img src={imageOne} className="InfoBoxListImage rounded float-right" alt="..."></img>
       <div className="InfoBoxTextWrapper">
         <h3 className="InfoBoxImpact">Gör påverkan själv!</h3>
         <ul className="InfoBoxImpactList">
