@@ -4,13 +4,15 @@ import React from 'react';
 // css
 import './App.css';
 
+// försök koppla via id istället  ?
+
 const InfoBoxText = ({ blogs }) => {
   return (
     <div className='InfoBox'>
       <div className="InfoBoxTextWrapper">
       {blogs.map(blog => (
         <div className="blog-preview" >
-          <div className="textWrapper">
+          <div className="textWrapper" key={blog.id}>
             <h3 className="InfoBoxTitle"> {blog.title} </h3>
             <p className="InfoBoxText"> {blog.body} </p>
             <p className="InfoBoxText"> {blog.body} </p>

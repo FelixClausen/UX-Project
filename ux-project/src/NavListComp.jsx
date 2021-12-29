@@ -28,23 +28,19 @@ function NavListComp() {
       <div>
         <ul className="nav-item nav justify-content-center">
           {/* One "li" per link */}
-          <li className="navTest hidden">
+          <li className="navLink hidden">
             {/* Uses Link to navigate through "pages" */}
             <Link to="/" className="nav-link" aria-current="page"><BsArrowLeftShort />Tillbaka</Link>
           </li>
-          <li className="navTest">
+          <li className="navLink">
             {/* Uses Link to navigate through "pages" */}
-            <Link to="/" className="nav-link" aria-current="page">Home</Link>
+            <Link to="/" className="nav-link" aria-current="page">Start</Link>
           </li>
-          <li className="navTest">
+          <li className="navLink">
             {/* Uses Link to navigate through "pages" */}
             <Link to="/klimat" className="nav-link" aria-current="page">Klimat</Link>
           </li>
-          <li className="navTest">
-            {/* Uses Link to navigate through "pages" */}
-            <Link to="/compare" className="nav-link" aria-current="page">Jämför</Link>
-          </li>
-          <li className="navTest">
+          <li className="navLink">
             {/* Uses Link to navigate through "pages" !NOT WORKING */}
             <Link to="/" className="nav-link" aria-current="page">Workshops</Link>
           </li>
@@ -54,7 +50,6 @@ function NavListComp() {
           {/* Sätter "path" -> Visar vald/a komponenter (borde vara en container-komponent?) */}
           <Route path="/" element={<IndexCardWrapper />}> </Route>
           <Route path="/klimat" element={<InfoBox />}> </Route>
-          <Route path="/compare" element={<App2 />}> </Route>
         </Routes>
       </div>
     </Router>

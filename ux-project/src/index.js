@@ -8,18 +8,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 // components
 import HeaderComp from './HeaderComp';
-import FontSizeChanger from './components/FontSizeChanger'; // Placeras här temporärt för display
+//import FontSizeChanger from './components/FontSizeChanger'; // Placeras här temporärt för display
 
 
 // render components in root
 ReactDOM.render(
   <React.StrictMode>
     <HeaderComp />
-    <FontSizeChanger />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
+
+//    <FontSizeChanger />
 
 /*
 kommandon för git

@@ -44,7 +44,7 @@ const CompareBarChart = (props) => {
         placeholder="1999"
         onKeyDown={e => handleYear(e)}
         />
-        <button>Search</button>
+        <button>Jämför</button>
       </div>
 
       <BarChart

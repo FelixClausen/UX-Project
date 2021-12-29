@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 import './App.css';
 
 // icons
-import { BsArrowRightShort } from "react-icons/bs";
+//import { BsArrowRightShort } from "react-icons/bs";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const IndexCard = ({ blogs }) => {
   return (
@@ -19,7 +21,9 @@ const IndexCard = ({ blogs }) => {
               <h5 className="card-title">{blog.title}</h5>
               <p className="card-text">{blog.body}</p>
               <Link to="/klimat">
-                <button type="button" className="btn btn-outline-dark">Read more <BsArrowRightShort /></button>
+                <button type="button" className="btn btn-outline-dark">Read more
+                  <span className='btnIcon-Right'><FontAwesomeIcon icon={faChevronRight} /></span>
+                </button>
               </Link>
             </div>
           </div>

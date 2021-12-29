@@ -12,6 +12,10 @@ import InfoBoxList from './InfoBoxList';
 import Graph from "./Graph";
 import CompareBarChart from "./CompareBarChart";
 
+// icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+
 // images
 import fossilFuel from './images/fossilFuel.jpg';
 import globalTemperature from './images/globalTemperature.jpg';
@@ -29,10 +33,28 @@ import { getCO2Emissionsdata } from "./data/CO2Emission";
 
 const InfoBox = () => {
   const [fossilFuels] = useState([
-    { title: 'Fossil Fuel',
+    { title: 'Fossila bränslen',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
       img: fossilFuel,
       id: 1
+    },
+  ])
+
+  // redigera denna för att ändra den första listan
+  const [test_1] = useState([
+    { title: 'hallå ?',
+      li_1: 'item 1',
+      li_2: 'item 2',
+      li_3: 'item 3'
+    },
+  ])
+
+  // redigera denna för att ändra den andra listan
+  const [impact] = useState([
+    { title: 'hallå ? two',
+      li_1: 'item 1',
+      li_2: 'item 2',
+      li_3: 'item 3'
     },
   ])
 
@@ -92,10 +114,10 @@ const InfoBox = () => {
   return (
     <div className="customBTN">
       <Link to="/">
-        <button type="button" className="customBTN show btn btn-outline-dark">Go back</button>
+        <button type="button" className="customBTN show btn btn-outline-dark"><span className='btnIcon-Left'><FontAwesomeIcon icon={faChevronLeft} /></span>Tillbaka</button>
       </Link>
       <InfoBoxText blogs={fossilFuels} />
-      <InfoBoxList />
+      <InfoBoxList blogs={test_1} />
       <Graph />
       <InfoBoxText blogs={fossilFuels} />
       <h1>Jämför årtal inom Fossila bränslen</h1>
@@ -112,9 +134,9 @@ const InfoBox = () => {
         />
       </div>
       <InfoBoxText blogs={fossilFuels} />
-      <InfoBoxList />
+      <InfoBoxList blogs={impact} />
       <Link to="/">
-        <button type="button" className="customBTN show btn btn-outline-dark">Go back</button>
+        <button type="button" className="customBTN show btn btn-outline-dark"><span className='btnIcon-Left'><FontAwesomeIcon icon={faChevronLeft} /></span> Tillbaka</button>
       </Link>
     </div>
   );

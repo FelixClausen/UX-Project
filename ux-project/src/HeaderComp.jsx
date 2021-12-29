@@ -8,7 +8,7 @@ import './responsive.css'
 // components
 import NavListComp from './NavListComp';
 import LogoComp from './LogoComp';
-import SearchComp from './SearchComp';
+//import SearchComp from './SearchComp';
 
 // function to show container component
 function HeaderComp() {
@@ -19,10 +19,11 @@ function HeaderComp() {
       <LogoComp />
       {/* navigation container */}
       <NavListComp />
-      {/* quick search container */}
-      <SearchComp />
+      <div className='filler'></div>
     </nav>
   );
 }
 
 export default HeaderComp;
+
+// <SearchComp />

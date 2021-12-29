@@ -47,13 +47,30 @@
 		margin-top: 10rem;
 	}
 
+	.InfoBox img {
+		width: 320px;
+		height: 250px;
+		margin-left: 2rem;
+	}
+
+	.InfoBoxTextWrapper li h4,
+	.InfoBoxTextWrapper h3 {
+		font-size: 16px;
+		font-weight: 500;
+	}
+
+	.InfoBoxTextWrapper,
+	.InfoBoxTextWrapper {
+		margin-left: 2rem;
+	}
 	.customBTN h1 {
 		margin-top: 10rem;
+		margin-left: 1rem;
 	}
 
 	.indexCardTitle {
-		padding-top: 5rem;
-		font-size: 2.5em;
+		font-size: 2em;
+		margin-left: 1rem;
 	}
 
 	.CardWrapper {
@@ -77,5 +94,45 @@
 	.card-text {
 		font-size: 1.1em;
 		max-width: 230px;
+	}
+
+	.Graph {
+		width: 700px;
+		height: 350px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.compareBars {
+		overflow: hidden;
+	}
+
+	.barBox {
+		text-align: end;
+		margin-right: -1rem;
+	}
+}
+
+/*
+  Enbart för att göra övergångar snyggare.
+  Kanske borde skriva om till mer flexibla värden men svårt med bild då den blir stretchad?
+*/
+@media only screen and (max-width: 1100px) {
+	.CardWrapper {
+		width: 400px;
+	}
+
+	.card {
+		width: 385px;
+		height: 400px;
+	}
+
+	.CardWrapper {
+		width: 400px;
+	}
+
+	.cardImg {
+		width: 382px;
+		height: 398px;
 	}
 }

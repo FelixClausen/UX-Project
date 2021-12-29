@@ -44,9 +44,6 @@ const App2 = () => {
   // return the actual charts
   return (
     <div className="customBTN center">
-      <Link to="/">
-        <button type="button" className="btn show btn-outline-dark">Go back</button>
-      </Link>
       <h1>Vilka årtal vill du jämföra?</h1>
       <div className="App compareBars">
         <CompareBarChart

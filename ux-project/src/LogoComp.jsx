@@ -10,9 +10,9 @@ import logo from './logo.svg';
 // function to show the container component
 function LogoComp() {
   return (
-    <div className="navbar-brand" to="/index">
-      <p className="navbar-brand" >
-        <img src={logo} width="30" height="30" className="d-inline-block align-top" alt=""></img>brand<span>name</span>
+    <div className="navbar-brand" >
+      <p className="navLogo" >
+        <img src={logo} width="30" height="30" className="d-inline-block align-top" alt=""></img>Eco<span>naire</span>
       </p>
     </div>
   );
