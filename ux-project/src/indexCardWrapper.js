@@ -9,6 +9,11 @@ import fossilFuel from './images/fossilFuel.jpg';
 import globalTemperature from './images/globalTemperature.jpg';
 import glaciersSize from './images/glaciersSize.jpeg';
 import seaLevels from './images/seaLevels.jpg';
+import x1 from './images/x1.png'
+
+// Kolla figma för nya propotioner för bilderna (insta post 1-4)
+// se nedre raden på index korten för skillnad
+// vi behöver också fler bilder
 
 // components
 import IndexCard from './indexCard';
@@ -25,7 +30,7 @@ const IndexCardWrapper = () => {
   const [waterLevels] = useState([
     { title: 'Sea Levels',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit.',
-      img: seaLevels,
+      img: glaciersSize,
       id: 2
     },
   ])
@@ -41,7 +46,7 @@ const IndexCardWrapper = () => {
   const [glaciersSizes] = useState([
     { title: 'Glaciers Size',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit.',
-      img: glaciersSize,
+      img: x1,
       id: 4
     },
   ])

@@ -36,7 +36,7 @@ const InfoBox = () => {
   const [fossilFuels] = useState([
     { title: 'Fossila bränslen',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: fossilFuel,
+      img: glaciersSize,
       id: 1
     },
   ])
