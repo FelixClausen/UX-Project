@@ -16,6 +16,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 // components
 import IndexCardWrapper from './indexCardWrapper';
 import InfoBox from './InfoBox';
+import Test from './Graph2';
 
 /*
  Lägg till fler ikoner för iPad
@@ -53,6 +54,9 @@ function NavListComp() {
           {/* Sätter "path" -> Visar vald/a komponenter (borde vara en container-komponent?) */}
           <Route path="/" element={<IndexCardWrapper />}> </Route>
           <Route path="/klimat" element={<InfoBox />}> </Route>
+          {/* /test är ett exempel på hur vi kan använda en 'container'-komponent för att
+              visa rätt innehåll baserat på vad användaren valt. Just nu visar den bara en graf för havsnivån */}
+          <Route path="/test" element={<Test />}> </Route>
         </Routes>
       </div>
     </Router>

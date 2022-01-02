@@ -20,7 +20,7 @@ const IndexCard = ({ blogs }) => {
               <img src={blog.img} className='cardImg' alt='alt' ></img>
               <h5 className="card-title">{blog.title}</h5>
               <p className="card-text">{blog.body}</p>
-              <Link to="/klimat">
+              <Link to="/">
                 <button type="button" className="btn btn-outline-dark">Läs mer
                   <span className='btnIcon-Right'><FontAwesomeIcon icon={faChevronRight} /></span>
                 </button>

@@ -19,6 +19,7 @@ import x1 from './images/x1.png'
 
 // components
 import IndexCard from './indexCard';
+import { Link } from 'react-router-dom';
 
 const IndexCardWrapper = () => {
   const [fossilFuels] = useState([
@@ -60,7 +61,11 @@ const IndexCardWrapper = () => {
       <div className='flex'>
         <div>
           {/* Uses components */}
-          <IndexCard blogs={fossilFuels}/>
+          {/* Eftersom Link omfamnar hela komponenten blir hela kortet en länk och inte bara knappen.
+              Kanske kan vara så? */}
+          <Link to="/test">
+            <IndexCard blogs={fossilFuels}/>
+          </Link>
           <IndexCard blogs={waterLevels}/>
         </div>
         <div>
