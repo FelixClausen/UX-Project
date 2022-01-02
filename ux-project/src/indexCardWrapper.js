@@ -12,6 +12,7 @@ import seaLevels from './images/seaLevels.jpg';
 
 // components
 import IndexCard from './indexCard';
+import FontSizeChanger from './components/FontSizeChanger';
 
 const IndexCardWrapper = () => {
   const [fossilFuels] = useState([
@@ -61,6 +62,7 @@ const IndexCardWrapper = () => {
           <IndexCard blogs={glaciersSizes}/>
         </div>
       </div>
+      <FontSizeChanger />
     </div>
   );
 }

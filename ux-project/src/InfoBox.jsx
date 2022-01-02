@@ -10,7 +10,10 @@ import './responsive.css'
 import InfoBoxText from "./InfoBoxText";
 import InfoBoxList from './InfoBoxList';
 import Graph from "./Graph";
+import Test from "./Graph2";
 import CompareBarChart from "./CompareBarChart";
+
+import FontSizeChanger from './components/FontSizeChanger';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -110,16 +113,39 @@ const InfoBox = () => {
       alert("Year could not be found.");
     }
   };
-
+// stoleken på typsnittet börjar på 12,
+// storleken kan heller inte gå över 17 eller under 10 pga allt fallerar.
+  const [fontSize, setFontSize] = useState(12);
+  if (fontSize === 17) {
+    setFontSize(fontSize - 1)
+  }
+  if (fontSize === 10) {
+    setFontSize(fontSize + 1)
+  }
   return (
     <div className="customBTN">
       <Link to="/">
-        <button type="button" className="customBTN show btn btn-outline-dark"><span className='btnIcon-Left'><FontAwesomeIcon icon={faChevronLeft} /></span>Tillbaka</button>
+        <button type="button" className="show btn btn-outline-dark customBTN"><span className='btnIcon-Left'><FontAwesomeIcon icon={faChevronLeft} /></span>Tillbaka</button>
       </Link>
+      <div className='btnWrapper'>
+        <p>Justera storleken på texterna</p>
+        <button className='resizeUp' onClick={() => setFontSize(fontSize + 1)}> + </button>
+        <button className='resizeDown' onClick={() => setFontSize(fontSize - 1)}> - </button>
+      </div>
+      <div style={{
+            fontSize: `${fontSize}px`
+        }}>
       <InfoBoxText blogs={fossilFuels} />
       <InfoBoxList blogs={test_1} />
+      </div>
       <Graph />
+      {/* Test är enbart ett test för att återskapa diagram med olika data, just nu sea levels */}
+      <Test />
+      <div style={{
+            fontSize: `${fontSize}px`
+        }}>
       <InfoBoxText blogs={fossilFuels} />
+      </div>
       <h1>Jämför årtal inom Fossila bränslen</h1>
       <div className="App compareBars">
         <CompareBarChart
@@ -133,10 +159,14 @@ const InfoBox = () => {
           onYearFilter={handleYearFilter}
         />
       </div>
+      <div style={{
+            fontSize: `${fontSize}px`
+        }}>
       <InfoBoxText blogs={fossilFuels} />
       <InfoBoxList blogs={impact} />
+      </div>
       <Link to="/">
-        <button type="button" className="customBTN show btn btn-outline-dark"><span className='btnIcon-Left'><FontAwesomeIcon icon={faChevronLeft} /></span> Tillbaka</button>
+        <button type="button" className="show btn btn-outline-dark customBTN"><span className='btnIcon-Left'><FontAwesomeIcon icon={faChevronLeft} /></span> Tillbaka</button>
       </Link>
     </div>
   );

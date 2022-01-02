@@ -5,16 +5,16 @@ import React, { Component } from 'react'
 import './App.css';
 
 // components
-import CO2Emission from './components/LineChart';
+import SeaLevels from './components/LineChart2';
 
 // class function to render graph
-class Graph extends Component {
+class Test extends Component {
   render () {
     return (
       <div className="Graph">
-        <CO2Emission />
+        <SeaLevels />
       </div>
     );
   }
 }
-export default Graph;
+export default Test;

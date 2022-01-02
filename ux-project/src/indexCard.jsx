@@ -21,7 +21,7 @@ const IndexCard = ({ blogs }) => {
               <h5 className="card-title">{blog.title}</h5>
               <p className="card-text">{blog.body}</p>
               <Link to="/klimat">
-                <button type="button" className="btn btn-outline-dark">Read more
+                <button type="button" className="btn btn-outline-dark">Läs mer
                   <span className='btnIcon-Right'><FontAwesomeIcon icon={faChevronRight} /></span>
                 </button>
               </Link>

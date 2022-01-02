@@ -242,55 +242,39 @@
 /* ----- FontSizeChanger -----*/
 
 .btnWrapper {
-	display: flex;
 	text-align: left;
-	padding-left: 25rem;
-	padding-right: 25rem;
+	margin-top: 0rem;
+}
+
+.btnWrapper p {
+	font-size: 14px;
+	margin-bottom: -4.5rem;
 }
 
 .resizeUp {
-	box-shadow: inset 0px 1px 3px 0px #91b8b3;
-	background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-	background-color: #768d87;
-	border-radius: 5px;
-	border: 1px solid #566963;
-	display: inline-block;
-	cursor: pointer;
-	color: #ffffff;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 11px 23px;
-	text-decoration: none;
-	text-shadow: 0px -1px 0px #2b665e;
-	margin-bottom: 1rem;
+	margin-left: 1rem;
 }
 
 .resizeDown {
-	box-shadow: inset 0px 1px 3px 0px #91b8b3;
-	background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-	background-color: #768d87;
-	border-radius: 5px;
-	border: 1px solid #566963;
-	display: inline-block;
+	margin-left: 1rem;
+}
+
+.resizeUp,
+.resizeDown {
+	background-color: #495464;
 	cursor: pointer;
 	color: #ffffff;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 11px 23px;
+	font-size: 16px;
 	text-decoration: none;
-	text-shadow: 0px -1px 0px #2b665e;
-	margin-left: 5px;
-	margin-bottom: 1rem;
+
+	height: 30px !important;
+	width: 30px !important;
+	border-radius: 50%;
 }
 
 .resizeUp:hover,
 .resizeDown:hover {
-	background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
-	background-color: #6c7c7c;
-}
-
-.resizeUp:active,
-.resizeDown:active {
-	position: relative;
-	top: 1px;
+	background-color: #eee;
+	color: #495464;
+	border: 1px solid #495464;
 }
