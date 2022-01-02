@@ -44,7 +44,6 @@ const App2 = () => {
   // return the actual charts
   return (
     <div className="customBTN center">
-      <h1>Vilka årtal vill du jämföra?</h1>
       <div className="App compareBars">
         <CompareBarChart
           chartName="Pie1"

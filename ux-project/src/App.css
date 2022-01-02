@@ -38,7 +38,7 @@
 
 .navLink {
 	font-size: 1.2em;
-	width: 100px;
+	width: 120px;
 	margin: 2rem;
 	text-align: center;
 }
@@ -206,10 +206,15 @@
 	display: flex;
 }
 
+.margin1 {
+	margin-left: 1rem;
+}
+
 /* ----- Graph -----*/
 
 .Graph {
 	margin-bottom: 10rem;
+	margin-top: 3rem;
 	width: 844px;
 	height: 400px;
 }

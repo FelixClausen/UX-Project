@@ -7,12 +7,15 @@ import './App.css';
 import './responsive.css'
 
 // icons
-import { BsArrowLeftShort } from "react-icons/bs";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faCog } from '@fortawesome/free-solid-svg-icons'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 // components
 import IndexCardWrapper from './indexCardWrapper';
 import InfoBox from './InfoBox';
-import App2 from "./CompareData";
 
 /*
  Lägg till fler ikoner för iPad
@@ -30,19 +33,19 @@ function NavListComp() {
           {/* One "li" per link */}
           <li className="navLink hidden">
             {/* Uses Link to navigate through "pages" */}
-            <Link to="/" className="nav-link" aria-current="page"><BsArrowLeftShort />Tillbaka</Link>
+            <Link to="/" className="nav-link" aria-current="page"><span className='btnIcon-Left'><FontAwesomeIcon icon={faChevronLeft} /></span>Tillbaka</Link>
           </li>
           <li className="navLink">
             {/* Uses Link to navigate through "pages" */}
-            <Link to="/" className="nav-link" aria-current="page">Start</Link>
+            <Link to="/" className="nav-link" aria-current="page"><span className='btnIcon-Left'><FontAwesomeIcon icon={faHome} /></span>Start</Link>
           </li>
           <li className="navLink">
             {/* Uses Link to navigate through "pages" */}
-            <Link to="/klimat" className="nav-link" aria-current="page">Klimat</Link>
+            <Link to="/klimat" className="nav-link" aria-current="page"><span className='btnIcon-Left'><FontAwesomeIcon icon={faBookmark} /></span>Klimat</Link>
           </li>
           <li className="navLink">
             {/* Uses Link to navigate through "pages" !NOT WORKING */}
-            <Link to="/" className="nav-link" aria-current="page">Workshops</Link>
+            <Link to="/" className="nav-link" aria-current="page"><span className='btnIcon-Left'><FontAwesomeIcon icon={faCog} /></span>Workshops</Link>
           </li>
         </ul>
         {/* Uses "Routes" to contain paths */}

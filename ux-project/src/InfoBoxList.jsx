@@ -1,5 +1,4 @@
 // react
-import { faBlog } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 
 // css
@@ -19,7 +18,7 @@ const InfoBoxList = ({ blogs }) => {
     <div>
       {blogs.map(blog =>
         <div className="InfoBox">
-        <img src={imageOne} className="InfoBoxListImage rounded float-right" alt="..."></img>
+        <img src={blog.img} className="InfoBoxListImage rounded float-right" alt="..."></img>
         <div className="InfoBoxTextWrapper">
           <h3 className="InfoBoxImpact">{blog.title}</h3>
           <ul className="InfoBoxImpactList">

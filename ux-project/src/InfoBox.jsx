@@ -22,6 +22,10 @@ import fossilFuel from './images/fossilFuel.jpg';
 import globalTemperature from './images/globalTemperature.jpg';
 import glaciersSize from './images/glaciersSize.jpeg';
 import seaLevels from './images/seaLevels.jpg';
+import fossilabränslenindustri from './images/fossilabränslenindustri.jpg'
+import fossilabränslenhamn from './images/fossilabränslenhamn.jpg'
+import fossilabränslenfossil from './images/fossilabränslenfossil.jpg'
+import fossilabänslenpåverkan from './images/fossilabänslenpåverkan.jpg'
 
 // import seperate file that holds and wrapps data
 import { getCO2Emissionsdata } from "./data/CO2Emission";
@@ -35,27 +39,44 @@ import { getCO2Emissionsdata } from "./data/CO2Emission";
 const InfoBox = () => {
   const [fossilFuels] = useState([
     { title: 'Fossila bränslen',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: glaciersSize,
+      body: 'Fossila bränslen är olika energikällor i form av kolväten, som kommer från äldre geologiska perioder, och som kan påträffas på eller under marken i lito- och pedosfären. Enligt den biogeniska teorin, som är förhärskande idag, utgörs de fossila bränslena av rester av forntida djur och växter som bäddats ner i jorden och sedan under högt tryck och värme brutits ner till sina beståndsdelar (huvudsakligen kol och kolföreningar). Enligt den abiogeniska teorin utgörs de fossila bränslena av resultaten av kemiska processer under jordens forntid.',
+      img: fossilFuel,
+      id: 1
+    },
+  ])
+
+  const [fossilFuels2] = useState([
+    { title: 'Olika varianter',
+      body: 'De fossila bränslena omfattar främst naturgas, petroleum och kol. Naturgas består huvudsakligen av gasen metan och har ett högt innehåll av grundämnet väte jämfört med grundämnet kol. Metan finns i naturgasfält tillsammans med råolja eller bundet som metanklatrat. Petroleum (även kallad råolja) påträffas i vätskeform och innehåller en större mängd av grundämnet kol, medan de icke-flyktiga bergarterna som också kallas kol (ej att förväxla med grundämnet kol) innehåller en mycket stor mängd av grundämnet kol.',
+      img: fossilabränslenindustri,
+      id: 1
+    },
+  ])
+  const [fossilFuels3] = useState([
+    { title: 'Framtida fossila bränseln',
+      body: 'Enligt den biogeniska teorin bildades jordens petroleumtillgångar då förhistoriska alger och plankton samt andra växter och döda djur lagt sig på sjö- och havsbottnar under syrefria förhållanden. Detta organiska material har begravts under tjocka lager sediment. Genom högt tryck och hög temperatur har det omvandlats kemiskt, först till kerogen och sedan genom ytterligare tryck och värme till kolväten i vätske- eller gasform (det vill säga naturgas och petroleum). ',
+      img: fossilabränslenhamn,
       id: 1
     },
   ])
 
   // redigera denna för att ändra den första listan
   const [test_1] = useState([
-    { title: 'hallå ?',
-      li_1: 'item 1',
-      li_2: 'item 2',
-      li_3: 'item 3'
+    { title: 'Visste du att...',
+      li_1: 'fakta ett om klimat',
+      li_2: 'fakta två om klimat',
+      li_3: 'fakta tre om klimat',
+      img: fossilabränslenfossil,
     },
   ])
 
   // redigera denna för att ändra den andra listan
   const [impact] = useState([
-    { title: 'hallå ? two',
-      li_1: 'item 1',
-      li_2: 'item 2',
-      li_3: 'item 3'
+    { title: 'Gör påverkan själv...',
+      li_1: 'Tips nummer ett',
+      li_2: 'Tips nummer två',
+      li_3: 'Tips nummer tre',
+      img: fossilabänslenpåverkan,
     },
   ])
 
@@ -108,7 +129,7 @@ const InfoBox = () => {
       }
     } else {
       // alert the user if no data found
-      alert("Year could not be found.");
+      alert("Data från önskade årtalet finns inte ");
     }
   };
 // stoleken på typsnittet börjar på 12,
@@ -136,15 +157,13 @@ const InfoBox = () => {
       <InfoBoxText blogs={fossilFuels} />
       <InfoBoxList blogs={test_1} />
       </div>
-      <Graph />
-      {/* Test är enbart ett test för att återskapa diagram med olika data, just nu sea levels */}
+      {/* Test är enbart ett test för att återskapa diagram med olika data, just nu sea levels
       <Test />
-      <div style={{
-            fontSize: `${fontSize}px`
-        }}>
-      <InfoBoxText blogs={fossilFuels} />
-      </div>
-      <h1>Jämför årtal inom Fossila bränslen</h1>
+      */}
+      <h1>Historisk statistik på fossila bränslen</h1>
+      <h3 className='margin1'>Användningen av fossila bränslen</h3>
+      <Graph />
+      <h3 className='margin1'>Jämför årtal</h3>
       <div className="App compareBars">
         <CompareBarChart
           chartName="Pie1"
@@ -160,7 +179,13 @@ const InfoBox = () => {
       <div style={{
             fontSize: `${fontSize}px`
         }}>
-      <InfoBoxText blogs={fossilFuels} />
+      <InfoBoxText blogs={fossilFuels2} />
+      </div>
+
+      <div style={{
+            fontSize: `${fontSize}px`
+        }}>
+      <InfoBoxText blogs={fossilFuels3} />
       <InfoBoxList blogs={impact} />
       </div>
       <Link to="/">
@@ -171,29 +196,3 @@ const InfoBox = () => {
 }
 
 export default InfoBox;
-
-/*
-function InfoBox() {
-  return (
-    <div className='customBTN'>
-      <Link to="/">
-        <button type="button" className="customBTN btn btn-outline-dark">Go back</button>
-      </Link>
-      <div className="InfoBox">
-        <InfoBoxText />
-      </div>
-        <InfoBoxList />
-        <App />
-      <div className="InfoBox">
-        <InfoBoxText />
-      </div>
-      <InfoBoxList />
-      <Link to="/">
-        <button type="button" className="btn btn-outline-dark">Go back</button>
-      </Link>
-    </div>
-  );
-}
-
-export default InfoBox;
-*/

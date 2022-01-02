@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import './App.css';
 
 //images
-import fossilFuel from './images/fossilFuel.jpg';
+import fossilabränslenhamn from './images/fossilabränslenhamn.jpg'
 import globalTemperature from './images/globalTemperature.jpg';
 import glaciersSize from './images/glaciersSize.jpeg';
 import seaLevels from './images/seaLevels.jpg';
@@ -15,37 +15,39 @@ import x1 from './images/x1.png'
 // se nedre raden på index korten för skillnad
 // vi behöver också fler bilder
 
+// !!! texterna behöver skrivas om då det är kopierade från wikipedia !!!
+
 // components
 import IndexCard from './indexCard';
 
 const IndexCardWrapper = () => {
   const [fossilFuels] = useState([
-    { title: 'Fossil Fuel',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit.',
-      img: fossilFuel,
+    { title: 'Fossila bränslen',
+      body: 'Fossila bränslen är olika energikällor i form av kolväten som kommer från äldre geologiska perioder.',
+      img: fossilabränslenhamn,
       id: 1
     },
   ])
 
   const [waterLevels] = useState([
-    { title: 'Sea Levels',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit.',
-      img: glaciersSize,
+    { title: 'Vatten nivåer',
+      body: 'Havsyta, eller havsytan, havets nivå, är en nollpunkt som man refererar till i angivelser om höjder.',
+      img: seaLevels,
       id: 2
     },
   ])
 
   const [globalTemperatures] = useState([
-    { title: 'Global Temperature',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit.',
+    { title: 'Global uppvärmning',
+      body: 'Global uppvärmning kallas den observerade uppvärmningen av jordens lägre atmosfär och hav.',
       img: globalTemperature,
       id: 3
     },
   ])
 
   const [glaciersSizes] = useState([
-    { title: 'Glaciers Size',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit.',
+    { title: 'Glaciär',
+      body: 'En glaciär definieras som en årligen ackumulerad och omsatt massa av is och snö som har börjat röra sig.',
       img: x1,
       id: 4
     },
