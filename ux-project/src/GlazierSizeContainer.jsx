@@ -19,7 +19,11 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 // vi behöver fler bilder, lägg in dom under images,
 // byt sedan ut img värdet till de olika bilderna
 // images
-import x1 from './images/x1.png'
+import glacierOne from '../src/images/glacierOne.jpg';
+import glacierMap from '../src/images/glacierMap.png';
+import glacierMelt from '../src/images/glacierMelt.jpg';
+import glacierTemp from '../src/images/glacierTemp.jpg';
+import glacierLight from '../src/images/glacierLight.png';
 
 
 // import seperate file that holds and wrapps data
@@ -29,28 +33,28 @@ import { getCO2Emissionsdata } from "./data/CO2Emission";
 const GlazierSizeContainer = () => {
       const [GlacierSizeList] = useState([
         { title: 'Visste du att...',
-          li_1: 'fakta ett om klimat',
-          li_2: 'fakta två om klimat',
-          li_3: 'fakta tre om klimat',
-          img: x1,
+          li_1: 'Omkring 75 procent av världens dricksvattenreserv finns i glaciärer',
+          li_2: 'Världens största glaciär finns på Antarktis',
+          li_3: 'I Sverige finns nära 300 glaciärer',
+          img: glacierOne,
         },
       ])
 
       // redigera denna för att ändra den andra listan
       const [GlacierSizeImpact] = useState([
         { title: 'Gör påverkan själv...',
-          li_1: 'Tips nummer ett',
-          li_2: 'Tips nummer två',
-          li_3: 'Tips nummer tre',
-          img: x1,
+          li_1: 'Minska din användning av fossila bränslen',
+          li_2: 'Säg NEJ till plast',
+          li_3: 'Håll vår miljö ren, skräpa inte ned',
+          img: glacierLight,
         },
       ])
 
       // redigera denna för att ändra den första text blocket
       const [GlacierSizeIntro] = useState([
-        { title: 'Glaziärer',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-          img: x1,
+        { title: 'Glaciärer',
+          body: 'Ungefär 10 procent av jordens yta täcks av glaciärer. Gläcierer förekommer i alla världsdelar förutom på Australien. Glaciärer är egentligen sammanpackad snö och de bildas när vinterns snöfall är kraftigare än sommarens smältning.',
+          img: glacierMap,
           id: 2
         },
       ])
@@ -58,17 +62,17 @@ const GlazierSizeContainer = () => {
       // redigera denna för att ändra den andra text blocket
       const [GlacierSizeInformation] = useState([
         { title: 'Temperaturen',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-          img: x1,
+          body: 'Om medeltemperaturen på Jorden fortstätter att stiga kommer världens glaciärer att fortsätta smälta. Om alla glaciärer på jorden smälter kommer havsytan att stiga med ungefär 120 meter. Sedan 1800-talet har den globala medeltemperaturen ökat med en dryg grad.',
+          img: glacierTemp,
           id: 2
         },
       ])
 
       // redigera denna för att ändra den tredje text blocket
       const [GlacierSizeEnding] = useState([
-        { title: 'Glaziärerna smälter',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-          img: x1,
+        { title: 'Glaciärerna smälter',
+          body: 'Forskare varnar att smältande glaciärer kan medföra katastrofala konsekvenser för oss människor. Om havsytan stiger kan storstäder som Tokyo och New York hamna under vatten. Förhindrar vi inte att glaciärerna smälter bort förlorar vi också dessa som sötvattenresurs.',
+          img: glacierMelt,
           id: 2
         },
       ])
