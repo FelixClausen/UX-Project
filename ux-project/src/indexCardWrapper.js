@@ -20,6 +20,7 @@ import x1 from './images/x1.png'
 
 // components
 import IndexCard from './indexCard';
+import BookingForm from './form';
 
 const IndexCardWrapper = () => {
   const [fossilFuels] = useState([
@@ -79,6 +80,7 @@ const IndexCardWrapper = () => {
         </Link>
         </div>
       </div>
+      <BookingForm />
     </div>
   );
 }

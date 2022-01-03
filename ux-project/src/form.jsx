@@ -1,5 +1,5 @@
 import { Form, Button, DropdownButton, Dropdown} from "react-bootstrap";
-import { PersonIcon } from '@primer/octicons-react'
+//import { PersonIcon } from '@primer/octicons-react'
 
 export const BookingForm = () => {
   return (
@@ -7,13 +7,13 @@ export const BookingForm = () => {
       <h1>Delta i workshops</h1>
       <h2>Rubrik</h2>
       <h6>1. Fyll i dina uppgifter</h6>
-      
+
       <div className='rowContainer'>
       <Form>
         <div className="d-flex justify-content-between">
         <Form.Group className="mb-3" controlId="formBasicEmail">
-        
-          
+
+
           <Form.Label>Namn</Form.Label>
           <Form.Control type="email" placeholder="Åke"/>
         </Form.Group>
@@ -59,7 +59,7 @@ export const BookingForm = () => {
         <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
         </DropdownButton>
-        
+
         <DropdownButton id="dropdown-basic-button" title="20 januari">
         <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
         <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -71,12 +71,12 @@ export const BookingForm = () => {
           <h6 id='stepThree'>3. Avslut</h6>
           <Form.Label id='newsUpdate'>Vill du bli uppdaterad med nyhetsbrev?</Form.Label>
           <Form.Check label="Uppdatera mig gärna" type="checkbox"/>
-        
-          
+
+
         </Form.Group>
 
 
-        
+
         <div className="d-flex justify-content-center">
           <Button variant="secondary" type="submit" className="continue">
             Godkänn
@@ -95,7 +95,7 @@ export const BookingForm = () => {
 
       </div>
 
-    
+
   );
 };
 

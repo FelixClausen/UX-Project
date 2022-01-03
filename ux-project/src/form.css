@@ -1,100 +1,95 @@
-.form-container{
-    border-style: none;
-    padding-top: 2em;
-    padding-left: 4em;
-    padding-right: 4em;
-    padding-bottom: 2em;
-    margin-bottom: 0em;
-    margin-top: 2em;
-    margin-right: 30em;
-    margin-left: 20em;
-    background-color: #E8E8E8;
-
+.form-container {
+	border-style: none;
+	padding-top: 2em;
+	padding-left: 4em;
+	padding-right: 4em;
+	padding-bottom: 2em;
+	margin-bottom: 0em;
+	margin-top: 2em;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #e8e8e8;
 }
 
-.form-container2{
-    border-style: none;
-    padding-top: 0em;
-    padding-left: 4em;
-    padding-right: 4em;
-    padding-bottom: 2em;
-    margin-bottom: 0em;
-    margin-top: 0em;
-    margin-right: 0em;
-    margin-left: 0em;
-    background-color: #E8E8E8;
+.form-container2 {
+	border-style: none;
+	padding-top: 0em;
+	padding-left: 4em;
+	padding-right: 4em;
+	padding-bottom: 2em;
+	background-color: #e8e8e8;
+	width: 520px;
 }
 
-.rowContainer{
-    display:flex; 
-    flex-direction:row;
+.rowContainer {
+	display: flex;
+	flex-direction: row;
 }
-.continue{
-    padding-right: 1em;
+.continue {
+	padding-right: 1em;
 }
 
-
-.sms{
-    margin-right: 2em;
+.sms {
+	margin-right: 2em;
 }
 
 .form-label {
-    font-weight: bold;
+	font-weight: bold;
 }
 
-#formBasicEmail{
-    background-color: #BBBFCA;
-    color: #222831 !important;
+#formBasicEmail {
+	background-color: #bbbfca;
+	color: #222831 !important;
 }
-#formBasicLastname{
-    background-color: #BBBFCA;
-    color: #222831;
+#formBasicLastname {
+	background-color: #bbbfca;
+	color: #222831;
 }
-#formBasicTelephone{
-    background-color: #BBBFCA;
-    color: #222831;
+#formBasicTelephone {
+	background-color: #bbbfca;
+	color: #222831;
 }
-#formBasicTelephoneRepeat{
-    background-color: #BBBFCA;
-    color: #222831;
+#formBasicTelephoneRepeat {
+	background-color: #bbbfca;
+	color: #222831;
 }
-#formBasicEmail{
-    background-color: #BBBFCA;
-    color: #222831;
+#formBasicEmail {
+	background-color: #bbbfca;
+	color: #222831;
 }
-#formBasicEmailRepeat{
-    background-color: #BBBFCA;
-    color: #222831;
-}
-
-#dropdown-basic-button{
-    background-color: #BBBFCA;
-    border-style: none;
-    color: #222831;
-    width: 210px;
+#formBasicEmailRepeat {
+	background-color: #bbbfca;
+	color: #222831;
 }
 
-#pickDate{
-    margin-right: 8.5em;
+#dropdown-basic-button {
+	background-color: #bbbfca;
+	border-style: none;
+	color: #222831;
+	width: 210px;
 }
 
-#newsUpdate{
-    font-weight: normal;
+#pickDate {
+	margin-right: 8.5em;
+}
+
+#newsUpdate {
+	font-weight: normal;
 }
 
 .form-label {
-    font-weight: normal;
+	font-weight: normal;
 }
 
-#stepThree{
-    margin-top: 2em;
+#stepThree {
+	margin-top: 2em;
 }
 
-#pickSubject{
-    margin-top: 1em;
+#pickSubject {
+	margin-top: 1em;
 }
 
-#waterImg{
-    width: 500px;
-    height: 400px;
+#waterImg {
+	width: 500px;
+	height: 400px;
 }
