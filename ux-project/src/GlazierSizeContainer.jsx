@@ -9,7 +9,7 @@ import './responsive.css'
 // components
 import InfoBoxText from "./InfoBoxText";
 import InfoBoxList from './InfoBoxList';
-import SeaLevelsData from './SeaLevelsGraph'
+import GlazierSizeData from './GlazierSizeGraph'
 import CompareBarChart from "./CompareBarChart";
 
 // icons
@@ -128,7 +128,7 @@ const GlazierSizeContainer = () => {
       </div>
       <h1>Historisk statistik på havsnivåer</h1>
       <h3 className='margin1'> !! Förklara vad datan representerar !!</h3>
-      <SeaLevelsData />
+      <GlazierSizeData />
       <h3 className='margin1'>Jämför årtal</h3>
       <div className="App compareBars">
         <CompareBarChart

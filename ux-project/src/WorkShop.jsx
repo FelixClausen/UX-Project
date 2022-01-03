@@ -1,15 +1,17 @@
 // react
-import { Link } from 'react-router-dom';
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 // css
 import './App.css';
 import './responsive.css'
 
+// components
+import BookingForm from './form';
+
 const WorkShop = () => {
   return (
     <div>
-        <h1>WorkShops...</h1>
+        <BookingForm />
     </div>
   );
 }
