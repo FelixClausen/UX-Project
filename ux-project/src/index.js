@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom';
 // css
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import './form.css';
+
 
 // components
 import HeaderComp from './HeaderComp';
