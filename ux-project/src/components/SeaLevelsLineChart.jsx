@@ -10,13 +10,13 @@ import {
   CartesianGrid
 } from 'recharts';
 
-export default class SeaLevels extends Component {
+export default class SeaLevelsData extends Component {
   //static demoUrl = 'https://my.api.mockaroo.com/temp.json?key=8eb9e6f0';
   render() {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
-          data={x}
+          data={seaData}
           margin={{
             top: 0,
             right: 5,
@@ -37,7 +37,7 @@ export default class SeaLevels extends Component {
   }
 }
 
-const x = [
+const seaData = [
   {"GMSL": -158.7, "GMSL uncertainty": 24.2, "Time": "1880-03-15"},
   {"GMSL": -153.1, "GMSL uncertainty": 24.2, "Time": "1881-03-15"},
   {"GMSL": -169.9, "GMSL uncertainty": 23.0, "Time": "1882-03-15"},

@@ -16,7 +16,10 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 // components
 import IndexCardWrapper from './indexCardWrapper';
 import InfoBox from './InfoBox';
-import Test from './Graph2';
+import SeaLevelsContainer from './SeaLevelsContainer';
+import GlobalTempContainer from './GlobalTempContainer';
+import GlazierSizeContainer from './GlazierSizeContainer';
+import WorkShop from './WorkShop';
 
 /*
  Lägg till fler ikoner för iPad
@@ -42,21 +45,24 @@ function NavListComp() {
           </li>
           <li className="navLink">
             {/* Uses Link to navigate through "pages" */}
-            <Link to="/klimat" className="nav-link" aria-current="page"><span className='btnIcon-Left'><FontAwesomeIcon icon={faBookmark} /></span>Klimat</Link>
+            <Link to="/" className="nav-link" aria-current="page"><span className='btnIcon-Left'><FontAwesomeIcon icon={faBookmark} /></span>Klimat</Link>
           </li>
           <li className="navLink">
             {/* Uses Link to navigate through "pages" !NOT WORKING */}
-            <Link to="/" className="nav-link" aria-current="page"><span className='btnIcon-Left'><FontAwesomeIcon icon={faCog} /></span>Workshops</Link>
+            <Link to="/workshop" className="nav-link" aria-current="page"><span className='btnIcon-Left'><FontAwesomeIcon icon={faCog} /></span>Workshops</Link>
           </li>
         </ul>
         {/* Uses "Routes" to contain paths */}
         <Routes>
           {/* Sätter "path" -> Visar vald/a komponenter (borde vara en container-komponent?) */}
           <Route path="/" element={<IndexCardWrapper />}> </Route>
-          <Route path="/klimat" element={<InfoBox />}> </Route>
+          <Route path="/workshop" element={<WorkShop />}> </Route>
+          <Route path="/fossil" element={<InfoBox />}> </Route>
           {/* /test är ett exempel på hur vi kan använda en 'container'-komponent för att
               visa rätt innehåll baserat på vad användaren valt. Just nu visar den bara en graf för havsnivån */}
-          <Route path="/test" element={<Test />}> </Route>
+          <Route path="/havsniva" element={<SeaLevelsContainer />}> </Route>
+          <Route path="/global" element={<GlobalTempContainer />}> </Route>
+          <Route path="/glaciar" element={<GlazierSizeContainer />}> </Route>
         </Routes>
       </div>
     </Router>

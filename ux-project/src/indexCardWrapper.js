@@ -1,5 +1,6 @@
 // react
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // css
 import './App.css';
@@ -19,7 +20,6 @@ import x1 from './images/x1.png'
 
 // components
 import IndexCard from './indexCard';
-import { Link } from 'react-router-dom';
 
 const IndexCardWrapper = () => {
   const [fossilFuels] = useState([
@@ -63,14 +63,20 @@ const IndexCardWrapper = () => {
           {/* Uses components */}
           {/* Eftersom Link omfamnar hela komponenten blir hela kortet en länk och inte bara knappen.
               Kanske kan vara så? */}
-          <Link to="/test">
+          <Link to="/fossil">
             <IndexCard blogs={fossilFuels}/>
           </Link>
+            <Link to="/havsniva">
           <IndexCard blogs={waterLevels}/>
+          </Link>
         </div>
         <div>
+        <Link to="/global">
           <IndexCard blogs={globalTemperatures}/>
+        </Link>
+        <Link to="/glaciar">
           <IndexCard blogs={glaciersSizes}/>
+        </Link>
         </div>
       </div>
     </div>
