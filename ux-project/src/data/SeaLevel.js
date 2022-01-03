@@ -1,43 +1,5 @@
-import React, { Component } from 'react';
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  CartesianGrid
-} from 'recharts';
-
-export default class SeaLevelsData extends Component {
-  //static demoUrl = 'https://my.api.mockaroo.com/temp.json?key=8eb9e6f0';
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          data={seaData}
-          margin={{
-            top: 0,
-            right: 5,
-            left: -20,
-            bottom: -25,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="Time" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="GMSL" stroke="black" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="GMSL uncertainty" stroke="green" strokeWidth={2} dot={false} />
-        </LineChart>
-      </ResponsiveContainer>
-    );
-  }
-}
-
-const seaData = [
+const SeaLeveldata = [
+	{ GMSL: 0, 'GMSL uncertainty': 0, Time: 1879 },
 	{ GMSL: -158.7, 'GMSL uncertainty': 24.2, Time: 1880 },
 	{ GMSL: -153.1, 'GMSL uncertainty': 24.2, Time: 1881 },
 	{ GMSL: -169.9, 'GMSL uncertainty': 23.0, Time: 1882 },
@@ -173,3 +135,7 @@ const seaData = [
 	{ GMSL: 76.1, 'GMSL uncertainty': 8.3, Time: 2012 },
 	{ GMSL: 67.7, 'GMSL uncertainty': 8.9, Time: 2013 },
 ];
+
+export function getSeaLevelsdata() {
+	return SeaLeveldata;
+}

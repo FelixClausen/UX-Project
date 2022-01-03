@@ -10,7 +10,7 @@ import './responsive.css'
 import InfoBoxText from "./InfoBoxText";
 import InfoBoxList from './InfoBoxList';
 import SeaLevelsData from './SeaLevelsGraph'
-import CompareBarChart from "./CompareBarChart";
+import SeaLevelCompareBarChart from "./SeaLevelCompareBarChart";
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,10 +19,10 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 // images
 import seaLevels from './images/seaLevels.jpg';
 
-
 // import seperate file that holds and wrapps data
 // denna ska bytas ut till data om havsnivåer
-import { getCO2Emissionsdata } from "./data/CO2Emission";
+import { getSeaLevelsdata } from "./data/SeaLevel";
+
 
 const SeaLevelsContainer = () => {
   // redigera denna för att ändra den första listan
@@ -72,26 +72,26 @@ const SeaLevelsContainer = () => {
     },
   ])
 
-  const [Co2Emission, setCo2Emission] = useState([]);
-  const [indexYear1, setIndexYear1] = useState(0);
-  const [indexYear2, setIndexYear2] = useState(0);
+  const [SeaLevelEmission, setSeaLevelEmission] = useState([]);
+  const [indexTime1, setIndexTime1] = useState(0);
+  const [indexTime2, setIndexTime2] = useState(0);
 
   useEffect(() => {
     // gets data from local file
-    setCo2Emission(getCO2Emissionsdata());
+    setSeaLevelEmission(getSeaLevelsdata());
   }, []);
 
-  const handleYearFilter = (chartName, Year) => {
-    let index = Co2Emission.findIndex(
-      co2 => co2.Year === parseInt(Year)
+  const handleTimeFilter = (chartName, Time) => {
+    let index = SeaLevelEmission.findIndex(
+      sl => sl.Time === parseInt(Time)
     );
     if (index !== -1) {
       switch (chartName) {
         case "Pie1":
-          setIndexYear1(index);
+          setIndexTime1(index);
           break;
         case "Pie2":
-          setIndexYear2(index);
+          setIndexTime2(index);
           break;
       }
     } else {
@@ -130,15 +130,15 @@ const SeaLevelsContainer = () => {
       <SeaLevelsData />
       <h3 className='margin1'>Jämför årtal</h3>
       <div className="App compareBars">
-        <CompareBarChart
+        <SeaLevelCompareBarChart
           chartName="Pie1"
-          Co2Emission={Co2Emission[indexYear1]}
-          onYearFilter={handleYearFilter}
+          SeaLevelEmission={SeaLevelEmission[indexTime1]}
+          onTimeFilter={handleTimeFilter}
         />
-        <CompareBarChart
+        <SeaLevelCompareBarChart
           chartName="Pie2"
-          Co2Emission={Co2Emission[indexYear2]}
-          onYearFilter={handleYearFilter}
+          SeaLevelEmission={SeaLevelEmission[indexTime2]}
+          onTimeFilter={handleTimeFilter}
         />
       </div>
       <div style={{

@@ -10,7 +10,7 @@ import './responsive.css'
 import InfoBoxText from "./InfoBoxText";
 import InfoBoxList from './InfoBoxList';
 import GlobalTemperatureData from './GlobalTemperatureGraph'
-import CompareBarChart from "./CompareBarChart";
+import GlobalTemperatureCompareBarChart from "./GlobalTemperatureCompareBarChart";
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -24,7 +24,7 @@ import globalTemperature from './images/globalTemperature.jpg'
 
 // import seperate file that holds and wrapps data
 // denna ska bytas ut till data om havsnivåer
-import { getCO2Emissionsdata } from "./data/CO2Emission";
+import { getGlobalTemperaturesdata } from "./data/GlobalTemperature";
 
 const GlobalTempContainer = () => {
     // redigera denna för att ändra den första listan
@@ -74,18 +74,18 @@ const GlobalTempContainer = () => {
         },
       ])
 
-  const [Co2Emission, setCo2Emission] = useState([]);
+  const [GlobaltemperatureEmission, setGlobaltemperatureEmission] = useState([]);
   const [indexYear1, setIndexYear1] = useState(0);
   const [indexYear2, setIndexYear2] = useState(0);
 
   useEffect(() => {
     // gets data from local file
-    setCo2Emission(getCO2Emissionsdata());
+    setGlobaltemperatureEmission(getGlobalTemperaturesdata());
   }, []);
 
   const handleYearFilter = (chartName, Year) => {
-    let index = Co2Emission.findIndex(
-      co2 => co2.Year === parseInt(Year)
+    let index = GlobaltemperatureEmission.findIndex(
+      gl => gl.Year === parseInt(Year)
     );
     if (index !== -1) {
       switch (chartName) {
@@ -133,14 +133,14 @@ const GlobalTempContainer = () => {
       <GlobalTemperatureData />
       <h3 className='margin1'>Jämför årtal</h3>
       <div className="App compareBars">
-        <CompareBarChart
+        <GlobalTemperatureCompareBarChart
           chartName="Pie1"
-          Co2Emission={Co2Emission[indexYear1]}
+          GlobaltemperatureEmission={GlobaltemperatureEmission[indexYear1]}
           onYearFilter={handleYearFilter}
         />
-        <CompareBarChart
+        <GlobalTemperatureCompareBarChart
           chartName="Pie2"
-          Co2Emission={Co2Emission[indexYear2]}
+          GlobaltemperatureEmission={GlobaltemperatureEmission[indexYear2]}
           onYearFilter={handleYearFilter}
         />
       </div>

@@ -1,6 +1,8 @@
 import { Form, Button, DropdownButton, Dropdown} from "react-bootstrap";
 //import { PersonIcon } from '@primer/octicons-react'
 
+import seaLevels from './images/seaLevels.jpg'
+
 export const BookingForm = () => {
   return (
     <div className="form-container">
@@ -86,7 +88,7 @@ export const BookingForm = () => {
 
 
       <div className='form-container2'>
-      <img src='water-ga5f91a4c0_1920.jpg' id='waterImg'></img>
+      <img src={seaLevels} id='waterImg'></img>
       <h3>Workshopnamn</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vel delectus corporis deleniti a at reiciendis fugiat rem repellendus libero maiores deserunt voluptates, incidunt sed ipsum. Fugit distinctio corporis voluptatem.</p>
       </div>

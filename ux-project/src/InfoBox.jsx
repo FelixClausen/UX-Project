@@ -18,9 +18,6 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 // images
 import fossilFuel from './images/fossilFuel.jpg';
-import globalTemperature from './images/globalTemperature.jpg';
-import glaciersSize from './images/glaciersSize.jpeg';
-import seaLevels from './images/seaLevels.jpg';
 import fossilabränslenindustri from './images/fossilabränslenindustri.jpg'
 import fossilabränslenhamn from './images/fossilabränslenhamn.jpg'
 import fossilabränslenfossil from './images/fossilabränslenfossil.jpg'
@@ -76,31 +73,6 @@ const InfoBox = () => {
       li_2: 'Tips nummer två',
       li_3: 'Tips nummer tre',
       img: fossilabänslenpåverkan,
-    },
-  ])
-
-  const [waterLevels] = useState([
-    { title: 'Sea Levels',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: seaLevels,
-      id: 2
-    },
-
-  ])
-
-  const [globalTemperatures] = useState([
-    { title: 'Global Temperature',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: globalTemperature,
-      id: 3
-    },
-  ])
-
-  const [glaciersSizes] = useState([
-    { title: 'Glaciers Size',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: glaciersSize,
-      id: 4
     },
   ])
 

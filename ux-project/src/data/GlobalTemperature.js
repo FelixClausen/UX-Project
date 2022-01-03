@@ -1,48 +1,5 @@
-import React, { Component } from 'react';
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  CartesianGrid
-} from 'recharts';
-
-export default class GlobalTemperatureData extends Component {
-  //static demoUrl = 'https://my.api.mockaroo.com/temp.json?key=8eb9e6f0';
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          data={globaltemperatureData}
-          margin={{
-            top: 0,
-            right: 5,
-            left: -20,
-            bottom: -25,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="Year" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          {/*
-            vi har problem här, den hämtar bara ett årtal.
-            Detta gör att den skriver ut samma värde för "Mean", den ska skriva ut både GCAG och GISTEMP.
-            Behöver vi visa båda? haha
-          */}
-          <Line type="monotone" name='GCAG' dataKey="Mean" stroke="black" strokeWidth={2} dot={false} />
-          <Line type="monotone" name='GISTEMP' dataKey="Mean" stroke="blue" strokeWidth={2} dot={false} />
-        </LineChart>
-      </ResponsiveContainer>
-    );
-  }
-}
-
-const globaltemperatureData = [
+const GlobalTemperaturedata = [
+	{ Mean: 0.0, Source: 'GCAG', Year: 2015 },
 	{ Mean: 0.9363, Source: 'GCAG', Year: 2016 },
 	{ Mean: 0.99, Source: 'GISTEMP', Year: 2016 },
 	{ Mean: 0.8998, Source: 'GCAG', Year: 2015 },
@@ -318,3 +275,7 @@ const globaltemperatureData = [
 	{ Mean: -0.1148, Source: 'GCAG', Year: 1880 },
 	{ Mean: -0.2, Source: 'GISTEMP', Year: 1880 },
 ];
+
+export function getGlobalTemperaturesdata() {
+	return GlobalTemperaturedata;
+}

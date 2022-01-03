@@ -10,7 +10,7 @@ import './responsive.css'
 import InfoBoxText from "./InfoBoxText";
 import InfoBoxList from './InfoBoxList';
 import GlazierSizeData from './GlazierSizeGraph'
-import CompareBarChart from "./CompareBarChart";
+import GlacierSizeCompareBarChart from "./GlacierSizeCompareBarChart";
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -28,7 +28,7 @@ import glacierLight from '../src/images/glacierLight.png';
 
 // import seperate file that holds and wrapps data
 // denna ska bytas ut till data om havsnivåer
-import { getCO2Emissionsdata } from "./data/CO2Emission";
+import { getGlacierSizesdata } from "./data/Dataset3_Glaciers Size";
 
 const GlazierSizeContainer = () => {
       const [GlacierSizeList] = useState([
@@ -77,18 +77,18 @@ const GlazierSizeContainer = () => {
         },
       ])
 
-  const [Co2Emission, setCo2Emission] = useState([]);
+  const [GlacierSizeEmission, setGlacierSizeEmission] = useState([]);
   const [indexYear1, setIndexYear1] = useState(0);
   const [indexYear2, setIndexYear2] = useState(0);
 
   useEffect(() => {
     // gets data from local file
-    setCo2Emission(getCO2Emissionsdata());
+    setGlacierSizeEmission(getGlacierSizesdata());
   }, []);
 
   const handleYearFilter = (chartName, Year) => {
-    let index = Co2Emission.findIndex(
-      co2 => co2.Year === parseInt(Year)
+    let index = GlacierSizeEmission.findIndex(
+      gl => gl.Year === parseInt(Year)
     );
     if (index !== -1) {
       switch (chartName) {
@@ -135,14 +135,14 @@ const GlazierSizeContainer = () => {
       <GlazierSizeData />
       <h3 className='margin1'>Jämför årtal</h3>
       <div className="App compareBars">
-        <CompareBarChart
+        <GlacierSizeCompareBarChart
           chartName="Pie1"
-          Co2Emission={Co2Emission[indexYear1]}
+          GlacierSizeEmission={GlacierSizeEmission[indexYear1]}
           onYearFilter={handleYearFilter}
         />
-        <CompareBarChart
+        <GlacierSizeCompareBarChart
           chartName="Pie2"
-          Co2Emission={Co2Emission[indexYear2]}
+          GlacierSizeEmission={GlacierSizeEmission[indexYear2]}
           onYearFilter={handleYearFilter}
         />
       </div>
