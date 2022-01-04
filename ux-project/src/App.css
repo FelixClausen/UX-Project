@@ -300,3 +300,31 @@
 	color: #495464;
 	border: 1px solid #495464;
 }
+
+.workshopIntro {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10rem;
+}
+
+.workshopIntro h1 {
+	font-size: 5em;
+	margin: 2rem;
+}
+
+.workshopIntro h3 {
+	margin: 2rem;
+}
+
+.workshopIntro p {
+	font-size: 14px;
+	margin: 2rem;
+}
+
+.workshopIntro .welcome {
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 10rem;
+}
