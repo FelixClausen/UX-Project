@@ -32,7 +32,7 @@ const GlobalTempContainer = () => {
         { title: 'Visste du att...',
           li_1: 'Främsta miljöboven för global uppvärming är fossila bränslen?',
           li_2: 'Det leder till ökade vattennivåer?',
-          li_3: 'Det blir en större risk för extremväder?',
+          li_3: 'Med endast 2-3 graders ökning står vi inför förödande konsekvenser?',
           img: globalTemperature,
         },
       ])
