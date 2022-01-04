@@ -40,7 +40,7 @@ const GlobalTempContainer = () => {
       // redigera denna för att ändra den andra listan
       const [GlobalTempImpact] = useState([
         { title: 'Gör påverkan själv...',
-          li_1: 'Använd förnybara energikällor',
+          li_1: 'Ändra dina matvanor',
           li_2: 'Flyg mindre ofta',
           li_3: 'Köp mer begagnat',
           img: globalTemperature,
