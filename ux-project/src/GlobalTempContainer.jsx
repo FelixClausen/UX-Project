@@ -127,9 +127,10 @@ const GlobalTempContainer = () => {
       <InfoBoxText blogs={GlobalTempIntro} />
       <InfoBoxList blogs={GlobalTempList} />
       </div>
-      <h1>Historisk statistik på havsnivåer</h1>
-      <h3 className='margin1'> !! Förklara vad datan representerar !!</h3>
-      <h3 className='margin1'> !! Datan är också felvänd??? !!</h3>
+      <h1 className='DiagramTitle'>Historisk statistik på global uppvärmning</h1>
+      <p className='margin1'> Den globala komponenten av Climate at a Glance (GCAG) tillhandahåller temperaturinformation i global skala.
+                              Verktyget tillhandahåller nästan realtidsanalys av månatliga och årliga temperaturer för världen och är avsett för studier av klimatförändringar och förändringar.</p>
+      <p className='margin1'> Y-axeln representerar den genomsnittliga globala medeltemperaturavvikelser i grader Celsius i förhållande till en basperiod.</p>
       <GlobalTemperatureData />
       <h3 className='margin1'>Jämför årtal</h3>
       <div className="App compareBars">

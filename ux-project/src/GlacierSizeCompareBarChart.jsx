@@ -26,8 +26,8 @@ const GlacierSizeCompareBarChart = (props) => {
 
   //object array
   const GLdataBarChart = [
-    { name: "Mean cumulative mass balance", GL: gl["Mean cumulative mass balance"] },
-    { name: "Number of observations", GL: gl["Number of observations"] },
+    { name: "Genomsnittlig kumulativ massbalans", GL: gl["Mean cumulative mass balance"] },
+    { name: "Antal observationer", GL: gl["Number of observations"] },
   ];
 
   // sets some colors, they are used later as Cell-fill

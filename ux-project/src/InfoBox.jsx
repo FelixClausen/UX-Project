@@ -132,7 +132,9 @@ const InfoBox = () => {
       <Test />
       */}
       <h1>Historisk statistik på fossila bränslen</h1>
-      <h3 className='margin1'>Användningen av fossila bränslen</h3>
+      <p className='margin1'>Statistiken representerar de fyra vanligaste varianterna av fossila bränslen, gasbränsle, flytande bränsle, fast bränsle och cement.
+      Genom att analysera alla fyra varianter sammanställt får du bäst överblick av användingen av fossila bränslen. </p>
+      <p className='margin1'>Y-axel representerar totala koldioxidutsläpp från fossilbränsleförbrukning och cementproduktion (miljoner ton C).</p>
       <Graph />
       <h3 className='margin1'>Jämför årtal</h3>
       <div className="App compareBars">

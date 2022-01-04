@@ -29,8 +29,8 @@ export default class GlacierSizeData extends Component {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="Mean cumulative mass balance" stroke="black" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="Number of observations" stroke="green" strokeWidth={2} dot={false} />
+          <Line type="monotone" name='Genomsnittlig kumulativ massbalans' dataKey="Mean cumulative mass balance" stroke="black" strokeWidth={2} dot={false} />
+          <Line type="monotone" name='Antal observationer' dataKey="Number of observations" stroke="green" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     );

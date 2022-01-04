@@ -125,8 +125,10 @@ const SeaLevelsContainer = () => {
       <InfoBoxText blogs={seaLevelsIntro} />
       <InfoBoxList blogs={seaLevelsList} />
       </div>
-      <h1>Historisk statistik på havsnivåer</h1>
-      <h3 className='margin1'> !! Förklara vad datan representerar !!</h3>
+      <h1 className='DiagramTitle'>Historisk statistik om havsnivåer</h1>
+      <p className='margin1'> Linjediagrammet visar genomsnittlig havsnivåförändring, vilket hänvisar till havsytans höjd, oavsett om närliggande land stiger eller faller.</p>
+      <p className='margin1'> Kumulativa förändringar är baserat på en kombination av långtidsmätningar av tidvattenmätare och de senaste satellitmätningarna. GMSL står för Global Mean Sea Level. </p>
+      <p className='margin1'> Y-axeln representerar meter. </p>
       <SeaLevelsData />
       <h3 className='margin1'>Jämför årtal</h3>
       <div className="App compareBars">

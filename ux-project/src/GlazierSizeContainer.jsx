@@ -130,8 +130,11 @@ const GlazierSizeContainer = () => {
       <InfoBoxText blogs={GlacierSizeIntro} />
       <InfoBoxList blogs={GlacierSizeList} />
       </div>
-      <h1>Historisk statistik på havsnivåer</h1>
-      <h3 className='margin1'> !! Förklara vad datan representerar !!</h3>
+      <h1>Historisk statistik om världens glaciärer</h1>
+      <p className='margin1'> Genomsnittlig kumulativ massbalans för "referensglaciärer" över hela världen hämtade från US EPA och World Glacier Monitoring Service
+(WGMS). Detta är den kumulativa förändringen i massbalansen för en uppsättning "referens"-glaciärer över hela världen. Värdena representerar genomsnittet av
+alla glaciärer som mättes. Negativa värden indikerar en nettoförlust av is och snö jämfört med basåret 1945. För konsekvens,
+mätningarna är i meter vattenekvivalenter, vilket representerar förändringar i medeltjockleken på en glaciär. </p>
       <GlazierSizeData />
       <h3 className='margin1'>Jämför årtal</h3>
       <div className="App compareBars">

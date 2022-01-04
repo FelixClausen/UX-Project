@@ -30,6 +30,11 @@
 	.customBTN {
 		margin-bottom: 10rem;
 	}
+
+	.margin1,
+	.DiagramTitle {
+		margin-left: 1rem;
+	}
 }
 
 @media only screen and (min-width: 1000px) {

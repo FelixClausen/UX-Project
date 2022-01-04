@@ -27,7 +27,7 @@ const SeaLevelCompareBarChart = (props) => {
   //object array
   const SLdataBarChart = [
     { name: "GMSL", SL: sl["GMSL"] },
-    { name: "GMSL uncertainty", SL: sl["GMSL uncertainty"] },
+    { name: "kumulativa förändringar", SL: sl["GMSL uncertainty"] },
   ];
 
   // sets some colors, they are used later as Cell-fill

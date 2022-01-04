@@ -30,7 +30,7 @@ export default class SeaLevelsData extends Component {
           <Tooltip />
           <Legend />
           <Line type="monotone" dataKey="GMSL" stroke="black" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="GMSL uncertainty" stroke="green" strokeWidth={2} dot={false} />
+          <Line type="monotone" name="kumulativa förändringar" dataKey="GMSL uncertainty" stroke="green" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     );

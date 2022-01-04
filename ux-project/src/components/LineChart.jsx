@@ -29,10 +29,10 @@ export default class CO2Emission extends Component {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="Gas Flaring" stroke="red" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="Gas Fuel" stroke="blue" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="Liquid Fuel" stroke="green" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="Solid Fuel" stroke="black" strokeWidth={2} dot={false} />
+          <Line type="monotone" name='Gasbränsle' dataKey="Gas Flaring" stroke="red" strokeWidth={2} dot={false} />
+          <Line type="monotone" name='Flytande bränsle' dataKey="Gas Fuel" stroke="blue" strokeWidth={2} dot={false} />
+          <Line type="monotone" name='Fast bränsle' dataKey="Liquid Fuel" stroke="green" strokeWidth={2} dot={false} />
+          <Line type="monotone" name='Cement' dataKey="Solid Fuel" stroke="black" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     );

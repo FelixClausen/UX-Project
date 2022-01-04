@@ -26,10 +26,10 @@ const CompareBarChart = (props) => {
 
   //object array
   const dataBarChart = [
-    { name: "Gas", CO2: co2["Gas Fuel"] },
-    { name: "Liq", CO2: co2["Liquid Fuel"] },
-    { name: "Sol", CO2: co2["Solid Fuel"] },
-    { name: "Cem", CO2: co2["Cement"] }
+    { name: "Gasbränsle", CO2: co2["Gas Fuel"] },
+    { name: "Flytande bränsle", CO2: co2["Liquid Fuel"] },
+    { name: "Fast bränsle", CO2: co2["Solid Fuel"] },
+    { name: "Cement", CO2: co2["Cement"] }
   ];
 
   // sets some colors, they are used later as Cell-fill
