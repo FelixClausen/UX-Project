@@ -58,7 +58,7 @@ export const BookingForm = () => {
         <div className='d-flex justify-content-between'>
         <DropdownButton id="dropdown-basic-button" title="Fossila bränslen">
         <Dropdown.Item href="#/action-1">Global uppvärmning</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Vattennivåer</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Havsnivån</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Glaciärer</Dropdown.Item>
         </DropdownButton>
 
@@ -89,8 +89,8 @@ export const BookingForm = () => {
 
       <div className='form-container2'>
       <img src={seaLevels} id='waterImg'></img>
-     <h3>Workshop om vattennivåer</h3>
-      <p>Delta i vår nya workshop som handlar om vattennivåer och dess påverkan på klimatet.</p>
+      <h3>Workshop om havsnivån</h3>
+      <p>Delta i vår nya workshop som handlar om havsnivån och dess påverkan på oss människor!</p>
       </div>
 
       </div>
