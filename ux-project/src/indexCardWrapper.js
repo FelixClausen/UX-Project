@@ -25,15 +25,15 @@ import BookingForm from './form';
 const IndexCardWrapper = () => {
   const [fossilFuels] = useState([
     { title: 'Fossila bränslen',
-      body: 'Fossila bränslen är olika energikällor i form av kolväten som kommer från äldre geologiska perioder.',
+      body: 'Fossila bränslen är kol, olja och naturgas. När vi bränner dem får vi energi. Samtidigt bildas koldioxid.',
       img: fossilabränslenhamn,
       id: 1
     },
   ])
 
   const [waterLevels] = useState([
-    { title: 'Vatten nivåer',
-      body: 'Havsyta, eller havsytan, havets nivå, är en nollpunkt som man refererar till i angivelser om höjder.',
+    { title: 'Havsnivån',
+      body: 'Havsnivån är en term som används för att beskriva vad havets höjd vanligtvis är och den är aldrig permanent.',
       img: seaLevels,
       id: 2
     },
@@ -41,15 +41,15 @@ const IndexCardWrapper = () => {
 
   const [globalTemperatures] = useState([
     { title: 'Global uppvärmning',
-      body: 'Global uppvärmning kallas den observerade uppvärmningen av jordens lägre atmosfär och hav.',
+      body: 'Global uppvärmning är temperaturen på jordens yta, hav och atmosfär som stiger över tiotusentals år.',
       img: globalTemperature,
       id: 3
     },
   ])
 
   const [glaciersSizes] = useState([
-    { title: 'Glaciär',
-      body: 'En glaciär definieras som en årligen ackumulerad och omsatt massa av is och snö som har börjat röra sig.',
+    { title: 'Glaciärer',
+      body: 'En glaciär är en stor kropp av is och snö. Det bildas eftersom snön i ett område inte smälter på sommaren.',
       img: x1,
       id: 4
     },
