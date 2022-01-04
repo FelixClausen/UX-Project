@@ -48,7 +48,7 @@ const SeaLevelsContainer = () => {
   // redigera denna för att ändra den första text blocket
   const [seaLevelsIntro] = useState([
     { title: 'Om havsnivåer',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
+      body: 'På grund av den globala uppvärmingen så ökar temperaturen så att isar smälter vilket leder till högre havsnivåer. Ungefär hälften av all koldioxid i atmosfären tas upp av haven och det omvandlas till kolsyra vilket gör att havsvattnen försuras. Salthalter i haven kommer också att påverkas.',
       img: seaLevels,
       id: 2
     },
