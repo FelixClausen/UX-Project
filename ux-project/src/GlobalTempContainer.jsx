@@ -19,7 +19,11 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 // vi behöver fler bilder, lägg in dom under images,
 // byt sedan ut img värdet till de olika bilderna
 // images
-import globalTemperature from './images/globalTemperature.jpg'
+import globalwarmingOne from './images/globalwarmingOne.svg';
+import globalwarmingTwo from './images/globalwarmingTwo.png';
+import globalwarmingThree from './images/globalwarmingThree.jpeg';
+import globalwarmingFour from './images/globalwarmingFour.jpg';
+import globalwarmingFive from './images/globalwarmingFive.jpg';
 
 
 // import seperate file that holds and wrapps data
@@ -33,7 +37,7 @@ const GlobalTempContainer = () => {
           li_1: 'Främsta miljöboven för global uppvärming är fossila bränslen?',
           li_2: 'Det leder till ökade vattennivåer?',
           li_3: 'Med endast 2-3 graders ökning står vi inför förödande konsekvenser?',
-          img: globalTemperature,
+          img: globalwarmingThree,
         },
       ])
 
@@ -43,7 +47,7 @@ const GlobalTempContainer = () => {
           li_1: 'Ändra dina matvanor',
           li_2: 'Flyg mindre ofta',
           li_3: 'Köp mer begagnat',
-          img: globalTemperature,
+          img: globalwarmingFive,
         },
       ])
 
@@ -51,7 +55,7 @@ const GlobalTempContainer = () => {
       const [GlobalTempIntro] = useState([
         { title: 'Global uppvärmning',
           body: 'På grund av människan så är nivåerna av koldioxid och växthusgaser markant mycket högre i jordens historia än någonsin tidigare. En av de främsta orsakerna för dessa utsläpp är på grund av fossila bränslen. Som en konsekvens av uppvärmningen smälter glaciärer och vattennivåer stiger vilket kan leda till extrema väderförhållanden. Det kan sedan leda till att arter riskerar att dö och att ekosystemet förstörs.',
-          img: globalTemperature,
+          img: globalwarmingOne,
           id: 2
         },
       ])
@@ -60,7 +64,7 @@ const GlobalTempContainer = () => {
       const [GlobalTempInformation] = useState([
         { title: 'Temperaturen',
           body: 'Om vi fortsätter att släppa ut samma mängd växthusgaser i framtiden så står vi inför en risk att öka temperaturen på jorden till 3 grader. Hela ekosystemet hade satts på spel då vi hade förlorat många växter och djur. Därför har alla världens länder beslutat att ha som mål att stanna vid 1,5 graders uppvärmning.',
-          img: globalTemperature,
+          img: globalwarmingTwo,
           id: 2
         },
       ])
@@ -69,7 +73,7 @@ const GlobalTempContainer = () => {
       const [GlobalTempEnding] = useState([
         { title: 'Framtida temperatur',
           body: 'Om vi inte lyckas begränsa en ökning av temperaturen till endast 1,5 grader står vi inför förödande konsekvenser. Som det ser ut idag måste vi minska utsläpp av växthusgaser med hälften globalt till år 2030.',
-          img: globalTemperature,
+          img: globalwarmingFour,
           id: 2
         },
       ])
