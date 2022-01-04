@@ -34,8 +34,7 @@ export default class GlobalTemperatureData extends Component {
             Detta gör att den skriver ut samma värde för "Mean", den ska skriva ut både GCAG och GISTEMP.
             Behöver vi visa båda? haha
           */}
-          <Line type="monotone" name='GCAG' dataKey="Mean" stroke="black" strokeWidth={2} dot={false} />
-          <Line type="monotone" name='GISTEMP' dataKey="Mean" stroke="blue" strokeWidth={2} dot={false} />
+          <Line type="monotone" name='GCAG' dataKey="Mean" stroke="orange" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     );
@@ -318,3 +317,5 @@ const globaltemperatureData = [
 	{ Mean: -0.1148, Source: 'GCAG', Year: 1880 },
 	{ Mean: -0.2, Source: 'GISTEMP', Year: 1880 },
 ];
+
+globaltemperatureData.reverse();

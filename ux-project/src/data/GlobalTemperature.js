@@ -1,5 +1,5 @@
 const GlobalTemperaturedata = [
-	{ Mean: 0.0, Source: 'GCAG', Year: 2015 },
+	{ Mean: 0.0, Source: 'GCAG', Year: 2017 },
 	{ Mean: 0.9363, Source: 'GCAG', Year: 2016 },
 	{ Mean: 0.99, Source: 'GISTEMP', Year: 2016 },
 	{ Mean: 0.8998, Source: 'GCAG', Year: 2015 },
@@ -274,8 +274,22 @@ const GlobalTemperaturedata = [
 	{ Mean: -0.12, Source: 'GISTEMP', Year: 1881 },
 	{ Mean: -0.1148, Source: 'GCAG', Year: 1880 },
 	{ Mean: -0.2, Source: 'GISTEMP', Year: 1880 },
+	{ Mean: -0.0, Source: 'GISTEMP', Year: 1879 },
 ];
 
 export function getGlobalTemperaturesdata() {
+	GlobalTemperaturedata.reverse();
 	return GlobalTemperaturedata;
 }
+
+/*
+const sorter = (a, b) => {
+	if (a.year !== b.year) {
+		return a.year - b.year;
+	}
+};
+
+*/
+//GlobalTemperaturedata.sort(sorter);
+
+console.log(GlobalTemperaturedata);

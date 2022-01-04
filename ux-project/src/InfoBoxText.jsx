@@ -1,4 +1,4 @@
-git// react
+// react
 import React from 'react';
 
 // css
