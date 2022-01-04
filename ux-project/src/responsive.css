@@ -56,7 +56,6 @@
 	.InfoBoxTextWrapper li h4,
 	.InfoBoxTextWrapper h3 {
 		font-size: 18px;
-		font-weight: 600;
 	}
 
 	.InfoBoxTextWrapper,
@@ -104,7 +103,10 @@
 	}
 
 	.compareBars {
-		overflow: hidden;
+		width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.15);
 	}
 
 	.barBox {
@@ -124,13 +126,17 @@
   Kanske borde skriva om till mer flexibla värden men svårt med bild då den blir stretchad?
 */
 @media only screen and (max-width: 1100px) {
+	.indexCardTitle {
+		font-size: 2.2em;
+	}
+
 	.CardWrapper {
 		width: 400px;
 	}
 
 	.card {
-		width: 385px;
-		height: 400px;
+		width: 382px;
+		height: 398px;
 	}
 
 	.CardWrapper {
