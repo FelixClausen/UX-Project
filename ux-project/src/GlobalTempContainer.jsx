@@ -59,7 +59,7 @@ const GlobalTempContainer = () => {
       // redigera denna för att ändra den andra text blocket
       const [GlobalTempInformation] = useState([
         { title: 'Temperaturen',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
+          body: 'Om vi fortsätter att släppa ut samma mängd växthusgaser i framtiden så står vi inför en risk att öka temperaturen på jorden till 3 grader. Hela ekosystemet hade satts på spel då vi hade förlorat många växter och djur. Därför har alla världens länder beslutat att ha som mål att stanna vid 1,5 graders uppvärmning.',
           img: globalTemperature,
           id: 2
         },
