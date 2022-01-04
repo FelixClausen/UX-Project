@@ -89,8 +89,8 @@ export const BookingForm = () => {
 
       <div className='form-container2'>
       <img src={seaLevels} id='waterImg'></img>
-      <h3>Workshopnamn</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vel delectus corporis deleniti a at reiciendis fugiat rem repellendus libero maiores deserunt voluptates, incidunt sed ipsum. Fugit distinctio corporis voluptatem.</p>
+     <h3>Workshop om vattennivåer</h3>
+      <p>Delta i vår nya workshop som handlar om vattennivåer och dess påverkan på klimatet.</p>
       </div>
 
       </div>
