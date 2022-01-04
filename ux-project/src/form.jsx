@@ -56,16 +56,16 @@ export const BookingForm = () => {
         <p id='pickDate'>Välj datum</p>
         </div>
         <div className='d-flex justify-content-between'>
-        <DropdownButton id="dropdown-basic-button" title="Fossil fuel">
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <DropdownButton id="dropdown-basic-button" title="Fossila bränslen">
+        <Dropdown.Item href="#/action-1">Global uppvärmning</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Vattennivåer</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Glaciärer</Dropdown.Item>
         </DropdownButton>
 
         <DropdownButton id="dropdown-basic-button" title="20 januari">
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">2 februari</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">12 februari</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">22 februari</Dropdown.Item>
         </DropdownButton>
         </div>
 
