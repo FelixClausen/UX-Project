@@ -30,9 +30,9 @@ const GlobalTempContainer = () => {
     // redigera denna för att ändra den första listan
     const [GlobalTempList] = useState([
         { title: 'Visste du att...',
-          li_1: 'fakta ett om klimat',
-          li_2: 'fakta två om klimat',
-          li_3: 'fakta tre om klimat',
+          li_1: 'Främsta miljöboven för global uppvärming är fossila bränslen?',
+          li_2: 'Det leder till ökade vattennivåer?',
+          li_3: 'Det blir en större risk för extremväder?',
           img: globalTemperature,
         },
       ])
@@ -40,7 +40,7 @@ const GlobalTempContainer = () => {
       // redigera denna för att ändra den andra listan
       const [GlobalTempImpact] = useState([
         { title: 'Gör påverkan själv...',
-          li_1: 'Tips nummer ett',
+          li_1: 'Använd förnybara energikällor',
           li_2: 'Tips nummer två',
           li_3: 'Tips nummer tre',
           img: globalTemperature,
@@ -50,7 +50,7 @@ const GlobalTempContainer = () => {
       // redigera denna för att ändra den första text blocket
       const [GlobalTempIntro] = useState([
         { title: 'Global uppvärmning',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
+          body: 'På grund av människan så är nivåerna av koldioxid och växthusgaser markant mycket högre i jordens historia än någonsin tidigare. En av de främsta orsakerna för dessa utsläpp är på grund av fossila bränslen. Som en konsekvens av uppvärmningen smälter glaciärer och vattennivåer stiger vilket kan leda till extrema väderförhållanden. Det kan sedan leda till att arter riskerar att dö och att ekosystemet förstörs.',
           img: globalTemperature,
           id: 2
         },
@@ -68,7 +68,7 @@ const GlobalTempContainer = () => {
       // redigera denna för att ändra den tredje text blocket
       const [GlobalTempEnding] = useState([
         { title: 'Framtida temperatur',
-          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
+          body: 'Om vi inte lyckas begränsa en ökning av temperaturen till endast 1,5 grader står vi inför förödande konsekvenser. Som det ser ut idag måste vi minska utsläpp av växthusgaser med hälften globalt till år 2030.',
           img: globalTemperature,
           id: 2
         },
