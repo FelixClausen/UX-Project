@@ -17,7 +17,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 // images
-import seaLevels from './images/seaLevels.jpg';
+import sealevelsOne from './images/sealevelsOne.jpeg';
+import sealevelsTwo from './images/sealevelsTwo.jpeg';
+import sealevelsThree from './images/sealevelsThree.jpeg';
+import sealevelsFour from './images/sealevelsFour.jpeg';
+import sealevelsFive from './images/sealevelsFive.jpg';
 
 // import seperate file that holds and wrapps data
 // denna ska bytas ut till data om havsnivåer
@@ -31,7 +35,7 @@ const SeaLevelsContainer = () => {
       li_1: 'fakta ett om klimat',
       li_2: 'fakta två om klimat',
       li_3: 'fakta tre om klimat',
-      img: seaLevels,
+      img: sealevelsThree,
     },
   ])
 
@@ -41,7 +45,7 @@ const SeaLevelsContainer = () => {
       li_1: 'Tips nummer ett',
       li_2: 'Tips nummer två',
       li_3: 'Tips nummer tre',
-      img: seaLevels,
+      img: sealevelsFive,
     },
   ])
 
@@ -49,7 +53,7 @@ const SeaLevelsContainer = () => {
   const [seaLevelsIntro] = useState([
     { title: 'Om havsnivåer',
       body: 'På grund av den globala uppvärmingen så ökar temperaturen så att isar smälter vilket leder till högre havsnivåer. Ungefär hälften av all koldioxid i atmosfären tas upp av haven och det omvandlas till kolsyra vilket gör att havsvattnen försuras. Salthalter i haven kommer också att påverkas.',
-      img: seaLevels,
+      img: sealevelsOne,
       id: 2
     },
   ])
@@ -58,7 +62,7 @@ const SeaLevelsContainer = () => {
   const [seaLevelsInformation] = useState([
     { title: 'Mer om havsnivåer',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: seaLevels,
+      img: sealevelsTwo,
       id: 2
     },
   ])
@@ -67,7 +71,7 @@ const SeaLevelsContainer = () => {
   const [seaLevelsEnding] = useState([
     { title: 'Framtida havsnivåer',
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
-      img: seaLevels,
+      img: sealevelsFour,
       id: 2
     },
   ])
