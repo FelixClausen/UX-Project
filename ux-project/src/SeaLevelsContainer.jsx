@@ -32,9 +32,9 @@ const SeaLevelsContainer = () => {
   // redigera denna för att ändra den första listan
   const [seaLevelsList] = useState([
     { title: 'Visste du att...',
-      li_1: 'fakta ett om klimat',
-      li_2: 'fakta två om klimat',
-      li_3: 'fakta tre om klimat',
+      li_1: 'Haven tar upp nästan hälften av all koldioxid och på grund av det försuras haven då det omvandlas till kolsyra',
+      li_2: 'Vattennivåerna har stigit mycket mer de senaste 10 åren',
+      li_3: 'År 2100 beräknas vattennivån ha stigit med ca 43cm globalt',
       img: sealevelsThree,
     },
   ])
