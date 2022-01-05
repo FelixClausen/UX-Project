@@ -61,7 +61,7 @@ const SeaLevelsContainer = () => {
   // redigera denna för att ändra den andra text blocket
   const [seaLevelsInformation] = useState([
     { title: 'Mer om havsnivåer',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
+      body: 'Mellan år 1900 och 1970 så har vattennivån stigit ca 1 mm per år fram tills de senaste tio åren då vattennivån istället stigit med nästan 4 mm per år.',
       img: sealevelsTwo,
       id: 2
     },
@@ -70,7 +70,7 @@ const SeaLevelsContainer = () => {
   // redigera denna för att ändra den tredje text blocket
   const [seaLevelsEnding] = useState([
     { title: 'Framtida havsnivåer',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl metus, aliquet pretium justo suscipit, laoreet consequat erat. Sed ac augue vel diam pharetra rhoncus.',
+      body: 'Om vattennivåerna fortsätter att öka som de gjort de senaste åren så beräknas de ha stigit upp till 43cm år 2100.',
       img: sealevelsFour,
       id: 2
     },
