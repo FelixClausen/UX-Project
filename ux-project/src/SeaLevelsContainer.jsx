@@ -42,7 +42,7 @@ const SeaLevelsContainer = () => {
   // redigera denna för att ändra den andra listan
   const [seaLevelsImpact] = useState([
     { title: 'Gör påverkan själv...',
-      li_1: 'Tips nummer ett',
+      li_1: 'Välj förnybara energikällor',
       li_2: 'Tips nummer två',
       li_3: 'Tips nummer tre',
       img: sealevelsFive,
