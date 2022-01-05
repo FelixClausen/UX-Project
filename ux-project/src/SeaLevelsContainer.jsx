@@ -52,7 +52,7 @@ const SeaLevelsContainer = () => {
   // redigera denna för att ändra den första text blocket
   const [seaLevelsIntro] = useState([
     { title: 'Om havsnivåer',
-      body: 'På grund av den globala uppvärmingen så ökar temperaturen så att isar smälter vilket leder till högre havsnivåer. Ungefär hälften av all koldioxid i atmosfären tas upp av haven och det omvandlas till kolsyra vilket gör att havsvattnen försuras. Salthalter i haven kommer också att påverkas.',
+      body: 'På grund av den globala uppvärmingen så ökar temperaturen så att isar smälter vilket leder till högre havsnivåer. Ungefär hälften av all koldioxid i atmosfären tas upp av haven och det omvandlas till kolsyra vilket gör att havsvattnen försuras. Salthalter i haven kommer också att påverkas. I haven nära polerna kommer salthalterna i vattnet bli lägre och i haven nära ekvatorn kommer salthalterna att bli högre.',
       img: sealevelsOne,
       id: 2
     },
