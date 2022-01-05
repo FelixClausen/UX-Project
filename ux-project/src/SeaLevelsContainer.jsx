@@ -70,7 +70,7 @@ const SeaLevelsContainer = () => {
   // redigera denna för att ändra den tredje text blocket
   const [seaLevelsEnding] = useState([
     { title: 'Framtida havsnivåer',
-      body: 'När den globala temperaturen fortsätter att värmas kommer havsnivån att fortsätta att stiga. Hur mycket den kommer att öka beror mest på takten för framtida koldioxidutsläpp och framtida global uppvärmning. Hur snabbt den kommer att stiga beror mest på hur snabbt glaciären och inlandsisen smälter. Om vattennivåerna fortsätter att öka som de gjort de senaste åren så beräknas de ha stigit upp till 43cm år 2100.',
+      body: 'Om den globala temperaturen fortsätter att värmas kommer havsnivån att fortsätta att stiga. Hur mycket den kommer att öka beror mest på takten för framtida koldioxidutsläpp och framtida global uppvärmning. Hur snabbt den kommer att stiga beror mest på hur snabbt glaciären och inlandsisen smälter. Om vattennivåerna fortsätter att öka som de gjort de senaste åren så beräknas de ha stigit upp till 43cm år 2100.',
       img: sealevelsFour,
       id: 2
     },
