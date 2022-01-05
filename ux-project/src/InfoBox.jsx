@@ -59,9 +59,9 @@ const InfoBox = () => {
   // redigera denna för att ändra den första listan
   const [test_1] = useState([
     { title: 'Visste du att...',
-      li_1: 'fakta ett om klimat',
-      li_2: 'fakta två om klimat',
-      li_3: 'fakta tre om klimat',
+      li_1: 'När fossila bränslen förbränns släpper de ut ohälsosamma gifter i luften vi andas',
+      li_2: 'Fossila bränslen är icke-förnybara, vilket innebär att de inte kan tillverkas av människor',
+      li_3: 'Cirka 90 % av vår energi kommer från fossila bränslen',
       img: fossilabränslenfossil,
     },
   ])
@@ -69,9 +69,9 @@ const InfoBox = () => {
   // redigera denna för att ändra den andra listan
   const [impact] = useState([
     { title: 'Gör påverkan själv...',
-      li_1: 'Tips nummer ett',
-      li_2: 'Tips nummer två',
-      li_3: 'Tips nummer tre',
+      li_1: 'Köp närproducerad mat. Om det produceras på en gård i närheten behövs mindre bränsle för att transportera det',
+      li_2: 'Installera solpaneler på ditt tak hemma så att du kan generera mer förnybar energi',
+      li_3: 'Skaffa en elbil om det är möjligt',
       img: fossilabänslenpåverkan,
     },
   ])
