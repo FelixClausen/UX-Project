@@ -1,3 +1,4 @@
+// arrayn innehåller all data från API
 const GlobalTemperaturedata = [
 	{ Mean: 0.0, Source: 'GCAG', Year: 2017 },
 	{ Mean: 0.9363, Source: 'GCAG', Year: 2016 },
@@ -277,19 +278,11 @@ const GlobalTemperaturedata = [
 	{ Mean: -0.0, Source: 'GISTEMP', Year: 1879 },
 ];
 
+// exporterar arrayn för att kunna använda den i andra filer
 export function getGlobalTemperaturesdata() {
+	// använder .reverse för att vända på datan så att årtalet stiger åt höger istället för vänster
+	// mestadels för att användarupplevelsen ska vara konsekvent,
+	//med tanke på att de andra diagrammen visar stigande årtal åt höger
 	GlobalTemperaturedata.reverse();
 	return GlobalTemperaturedata;
 }
-
-/*
-const sorter = (a, b) => {
-	if (a.year !== b.year) {
-		return a.year - b.year;
-	}
-};
-
-*/
-//GlobalTemperaturedata.sort(sorter);
-
-console.log(GlobalTemperaturedata);

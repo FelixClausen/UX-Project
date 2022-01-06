@@ -1,3 +1,4 @@
+// react + komponenter från recharts
 import React, { Component } from 'react';
 import {
   LineChart,
@@ -10,11 +11,14 @@ import {
   CartesianGrid
 } from 'recharts';
 
+// en class komponent för att visa diagrammet
 export default class SeaLevelsData extends Component {
-  //static demoUrl = 'https://my.api.mockaroo.com/temp.json?key=8eb9e6f0';
   render() {
     return (
+		// en container för diagrammet
       <ResponsiveContainer width="100%" height="100%">
+		  {/* ett linjediagram importerat från recharts */}
+		{/* ihop kopplat med datan från API genom data={array name} */}
         <LineChart
           data={seaData}
           margin={{
@@ -24,11 +28,14 @@ export default class SeaLevelsData extends Component {
             bottom: -25,
           }}
         >
+			{/* sätter linjer på diagrammet */}
           <CartesianGrid strokeDasharray="3 3" />
+		  {/* så att x-axeln visar time */}
           <XAxis dataKey="Time" />
           <YAxis />
           <Tooltip />
           <Legend />
+		  {/* visar två (2) linjer som representerar varje data */}
           <Line type="monotone" dataKey="GMSL" stroke="black" strokeWidth={2} dot={false} />
           <Line type="monotone" name="kumulativa förändringar" dataKey="GMSL uncertainty" stroke="green" strokeWidth={2} dot={false} />
         </LineChart>
@@ -37,6 +44,7 @@ export default class SeaLevelsData extends Component {
   }
 }
 
+// en array med all data från API
 const seaData = [
 	{ GMSL: -158.7, 'GMSL uncertainty': 24.2, Time: 1880 },
 	{ GMSL: -153.1, 'GMSL uncertainty': 24.2, Time: 1881 },

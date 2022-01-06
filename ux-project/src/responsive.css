@@ -1,3 +1,31 @@
+/*
+  Enbart för att göra övergångar snyggare.
+  Kanske borde skriva om till mer flexibla värden men svårt med bild då den blir stretchad?
+*/
+@media only screen and (max-width: 1100px) {
+	.indexCardTitle {
+		font-size: 2.2em;
+	}
+
+	.CardWrapper {
+		width: 400px;
+	}
+
+	.card {
+		width: 382px;
+		height: 398px;
+	}
+
+	.CardWrapper {
+		width: 400px;
+	}
+
+	.cardImg {
+		width: 382px;
+		height: 398px;
+	}
+}
+
 @media only screen and (max-width: 1000px) {
 	.nav-item {
 		position: fixed;
@@ -35,15 +63,7 @@
 	.DiagramTitle {
 		margin-left: 1rem;
 	}
-}
 
-@media only screen and (min-width: 1000px) {
-	.hidden {
-		display: none;
-	}
-}
-
-@media only screen and (max-width: 1000px) {
 	.show {
 		display: none;
 	}
@@ -87,8 +107,8 @@
 	}
 
 	.cardImg {
-		width: 382px;
-		height: 398px;
+		width: 385px;
+		height: 400px;
 	}
 
 	.card-title {
@@ -126,30 +146,32 @@
 	}
 }
 
-/*
-  Enbart för att göra övergångar snyggare.
-  Kanske borde skriva om till mer flexibla värden men svårt med bild då den blir stretchad?
-*/
-@media only screen and (max-width: 1100px) {
-	.indexCardTitle {
-		font-size: 2.2em;
+@media only screen and (max-width: 950px) {
+	.wsReverse {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-right: auto;
+		margin-left: auto;
+		width: 500px;
+		text-align: left;
 	}
 
-	.CardWrapper {
-		width: 400px;
+	.wsTitle {
+		text-align: center;
 	}
 
-	.card {
-		width: 382px;
-		height: 398px;
+	.wsText {
+		width: 500px;
 	}
 
-	.CardWrapper {
-		width: 400px;
+	.wsImg {
+		margin-top: 1rem;
+		margin-left: 10rem;
 	}
+}
 
-	.cardImg {
-		width: 382px;
-		height: 398px;
+@media only screen and (min-width: 1000px) {
+	.hidden {
+		display: none;
 	}
 }

@@ -1,3 +1,4 @@
+// arrayn innehåller all data från API
 const SeaLeveldata = [
 	{ GMSL: 0, 'GMSL uncertainty': 0, Time: 1879 },
 	{ GMSL: -158.7, 'GMSL uncertainty': 24.2, Time: 1880 },
@@ -136,6 +137,7 @@ const SeaLeveldata = [
 	{ GMSL: 67.7, 'GMSL uncertainty': 8.9, Time: 2013 },
 ];
 
+// exporterar arrayn för att kunna använda den i andra filer
 export function getSeaLevelsdata() {
 	return SeaLeveldata;
 }

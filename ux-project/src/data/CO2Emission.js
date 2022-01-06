@@ -1,3 +1,4 @@
+// arrayn innehåller all data från API
 const CO2Emissiondata = [
 	{
 		Cement: 0.0,
@@ -2611,6 +2612,7 @@ const CO2Emissiondata = [
 	},
 ];
 
+// exporterar arrayn för att kunna använda den i andra filer
 export function getCO2Emissionsdata() {
 	return CO2Emissiondata;
 }

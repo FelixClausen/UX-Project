@@ -1,3 +1,4 @@
+// react + komponenter från recharts
 import React, { Component } from 'react';
 import {
   LineChart,
@@ -10,11 +11,14 @@ import {
   CartesianGrid
 } from 'recharts';
 
+// en class komponent för att visa diagrammet
 export default class GlobalTemperatureData extends Component {
-  //static demoUrl = 'https://my.api.mockaroo.com/temp.json?key=8eb9e6f0';
   render() {
     return (
+	  // en container för diagrammet
       <ResponsiveContainer width="100%" height="100%">
+	    {/* ett linjediagram importerat från recharts */}
+		{/* ihop kopplat med datan från API genom data={array name} */}
         <LineChart
           data={globaltemperatureData}
           margin={{
@@ -24,7 +28,9 @@ export default class GlobalTemperatureData extends Component {
             bottom: -25,
           }}
         >
+		  {/* sätter linjer på diagrammet */}
           <CartesianGrid strokeDasharray="3 3" />
+		  {/* så att x-axeln visar year */}
           <XAxis dataKey="Year" />
           <YAxis />
           <Tooltip />
@@ -34,6 +40,7 @@ export default class GlobalTemperatureData extends Component {
             Detta gör att den skriver ut samma värde för "Mean", den ska skriva ut både GCAG och GISTEMP.
             Behöver vi visa båda? haha
           */}
+		  {/* visar en linje som representerar varje data */}
           <Line type="monotone" name='GCAG' dataKey="Mean" stroke="orange" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
@@ -41,6 +48,7 @@ export default class GlobalTemperatureData extends Component {
   }
 }
 
+// en array med all data från API
 const globaltemperatureData = [
 	{ Mean: 0.9363, Source: 'GCAG', Year: 2016 },
 	{ Mean: 0.99, Source: 'GISTEMP', Year: 2016 },

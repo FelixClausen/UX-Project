@@ -79,6 +79,10 @@
 	background-color: none !important;
 }
 
+.card:hover {
+	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
 .card-title {
 	font-size: 2em;
 	font-weight: 700;
@@ -302,7 +306,7 @@
 }
 
 .workshopIntro {
-	width: 600px;
+	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10rem;
@@ -327,4 +331,13 @@
 	font-size: 20px;
 	text-align: center;
 	margin-bottom: 10rem;
+}
+
+.wsImg {
+	width: 270px;
+	height: 270px;
+	border-radius: 50%;
+	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.15);
+	margin-left: 1.5rem;
+	margin-top: -2rem;
 }

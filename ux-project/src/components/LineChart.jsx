@@ -1,3 +1,4 @@
+// react + komponenter från recharts
 import React, { Component } from 'react';
 import {
   LineChart,
@@ -10,11 +11,14 @@ import {
   CartesianGrid
 } from 'recharts';
 
+// en class komponent för att visa diagrammet
 export default class CO2Emission extends Component {
-  //static demoUrl = 'https://my.api.mockaroo.com/temp.json?key=8eb9e6f0';
   render() {
     return (
+      // en container för diagrammet
       <ResponsiveContainer width="100%" height="100%">
+        {/* ett linjediagram importerat från recharts */}
+		{/* ihop kopplat med datan från API genom data={array name} */}
         <LineChart
           data={data}
           margin={{
@@ -24,11 +28,14 @@ export default class CO2Emission extends Component {
             bottom: -25,
           }}
         >
+          {/* sätter linjer på diagrammet */}
           <CartesianGrid strokeDasharray="3 3" />
+          {/* så att x-axeln visar year */}
           <XAxis dataKey="Year" />
           <YAxis />
           <Tooltip />
           <Legend />
+          {/* visar fyra (4) linjer som representerar varje data */}
           <Line type="monotone" name='Gasbränsle' dataKey="Gas Flaring" stroke="red" strokeWidth={2} dot={false} />
           <Line type="monotone" name='Flytande bränsle' dataKey="Gas Fuel" stroke="blue" strokeWidth={2} dot={false} />
           <Line type="monotone" name='Fast bränsle' dataKey="Liquid Fuel" stroke="green" strokeWidth={2} dot={false} />
@@ -39,10 +46,8 @@ export default class CO2Emission extends Component {
   }
 }
 
-// tog bort datan tidigare än 1800 eftersom det inte hände så mycket där, haha
-// ännu en nödlösning
-
-// data from url set to an array
+// för att korta ner linjediagrammet tog vi bort datan tidigare än 1800, därför att de var väldigt små rörelser
+// en array med all data från API
 const data = [
   {
       Cement: 0.0,
