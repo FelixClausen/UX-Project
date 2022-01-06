@@ -21,10 +21,12 @@ const GlacierSizeCompareBarChart = (props) => {
 
 	// sets Co2Emission to co2
 	let gl = props.GlacierSizeEmission;
-	// if data is undefined, show error message
+	// om datan är undifined visas ett felmeddelande
 	if (gl === undefined) return <p>There is no data.</p>;
 
 	//object array
+	// det första objektet är kopplat till genomsnittlig kumulativ massbalans
+	// det andra objektet är kopplat till antal obervationer
 	const GLdataBarChart = [
 		{
 			name: 'Genomsnittlig kumulativ massbalans',
@@ -36,7 +38,7 @@ const GlacierSizeCompareBarChart = (props) => {
 		},
 	];
 
-	// identifierar lite färger för att använda dem senare på staplarnas färg
+	// identifierar lite färger för att använda dem senare på staplarnas färg, enbart två eftersom det bara är två bars
 	const COLORS = ['#0088FE', '#00C49F'];
 
 	return (
@@ -49,10 +51,11 @@ const GlacierSizeCompareBarChart = (props) => {
 					placeholder="1999"
 					onKeyDown={(e) => handleYear(e)}
 				/>
+				{/* vid klick på knappen ska årtal hittas */}
 				<button onclick={(e) => handleYear(e)}>Jämför</button>
 			</div>
 			{/* användaren barChart från recharts,
-          kopplat till rätt data genom data */}
+                kopplat till rätt data genom GLdataBarChart */}
 			<BarChart
 				width={400}
 				height={300}
@@ -69,9 +72,10 @@ const GlacierSizeCompareBarChart = (props) => {
 				{/* x-axeln visar namnet på datan */}
 				<XAxis dataKey="name" />
 				<YAxis />
+				{/* använder en tooltip för att kunna se exakta värdet i grafen på muspekaren */}
 				<Tooltip />
 				{/* bar är själva stapeln,
-            fylld med färgerna ovan */}
+                    fylld med färgerna ovan */}
 				<Bar dataKey="GL" fill="#8884d8">
 					<Cell fill={COLORS[0]} />)
 					<Cell fill={COLORS[1]} />)

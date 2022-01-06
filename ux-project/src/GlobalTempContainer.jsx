@@ -16,8 +16,6 @@ import GlobalTemperatureCompareBarChart from './GlobalTemperatureCompareBarChart
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-// vi behöver fler bilder, lägg in dom under images,
-// byt sedan ut img värdet till de olika bilderna
 // images
 import globalwarmingOne from './images/globalwarmingOne.svg';
 import globalwarmingTwo from './images/globalwarmingTwo.png';
@@ -26,11 +24,11 @@ import globalwarmingFour from './images/globalwarmingFour.jpg';
 import globalwarmingFive from './images/globalwarmingFive.jpg';
 
 // import seperate file that holds and wrapps data
-// denna ska bytas ut till data om havsnivåer
 import { getGlobalTemperaturesdata } from './data/GlobalTemperature';
 
 const GlobalTempContainer = () => {
-	// redigera denna för att ändra den första listan
+	// denna visar en lista med information om ämnet
+	// ett obejkt för att anpassa text innehållet i återanvända komponenter
 	const [GlobalTempList] = useState([
 		{
 			title: 'Visste du att...',
@@ -41,7 +39,8 @@ const GlobalTempContainer = () => {
 		},
 	]);
 
-	// redigera denna för att ändra den andra listan
+	// denna visar tips på hur man själv kan göra påverkan
+	// ett obejkt för att anpassa text innehållet i återanvända komponenter
 	const [GlobalTempImpact] = useState([
 		{
 			title: 'Gör påverkan själv...',
@@ -52,7 +51,8 @@ const GlobalTempContainer = () => {
 		},
 	]);
 
-	// redigera denna för att ändra den första text blocket
+	// denna visar introduktion om ämnet
+	// ett obejkt för att anpassa text innehållet i återanvända komponenter
 	const [GlobalTempIntro] = useState([
 		{
 			title: 'Global uppvärmning',
@@ -61,8 +61,8 @@ const GlobalTempContainer = () => {
 			id: 2,
 		},
 	]);
-
-	// redigera denna för att ändra den andra text blocket
+	// denna visar ett textfält
+	// ett obejkt för att anpassa text innehållet i återanvända komponenter
 	const [GlobalTempInformation] = useState([
 		{
 			title: 'Temperaturen',
@@ -71,8 +71,8 @@ const GlobalTempContainer = () => {
 			id: 2,
 		},
 	]);
-
-	// redigera denna för att ändra den tredje text blocket
+	// denna visar avslutningen om ämnet
+	// ett obejkt för att anpassa text innehållet i återanvända komponenter
 	const [GlobalTempEnding] = useState([
 		{
 			title: 'Framtida temperatur',
@@ -81,7 +81,7 @@ const GlobalTempContainer = () => {
 			id: 2,
 		},
 	]);
-
+	// hämtar datan och bestämmmer index för att kunna hitta årtal att jämföra
 	const [GlobaltemperatureEmission, setGlobaltemperatureEmission] = useState(
 		[]
 	);
@@ -93,36 +93,39 @@ const GlobalTempContainer = () => {
 		setGlobaltemperatureEmission(getGlobalTemperaturesdata());
 	}, []);
 
+	// funktion för att köra och hitta årtal
 	const handleYearFilter = (chartName, Year) => {
 		let index = GlobaltemperatureEmission.findIndex(
 			(gl) => gl.Year === parseInt(Year)
 		);
+		// om årtal hittat, fyll i datan i Pie1
 		if (index !== -1) {
 			switch (chartName) {
 				case 'Pie1':
 					setIndexYear1(index);
-					break;
+					break; // om årtal hittat, fyll i datan i Pie2
 				case 'Pie2':
 					setIndexYear2(index);
 					break;
 			}
 		} else {
-			// alert the user if no data found
+			// om inget hittades, visa felmeddelande
 			alert('Data från önskade årtalet finns inte ');
 		}
 	};
-	// stoleken på typsnittet börjar på 12,
-	// storleken kan heller inte gå över 17 eller under 10 pga allt fallerar.
-	// ändra px värdet när rätt texter är på plats
+	// funktion för att ändra storlek på typsnittet
+	// sätter storleken på 12px
 	const [fontSize, setFontSize] = useState(12);
+	// om storleken på typsnittet är 17px, ta bort 1px vid klick
 	if (fontSize === 17) {
 		setFontSize(fontSize - 1);
-	}
+	} // om storleken på typsnittet är 10px, lägg till 1px vid klick
 	if (fontSize === 10) {
 		setFontSize(fontSize + 1);
 	}
 	return (
 		<div className="customBTN">
+			{/* använder link för att gå tillbaka till startsidan */}
 			<Link to="/">
 				<button type="button" className="show btn btn-outline-dark customBTN">
 					<span className="btnIcon-Left">
@@ -131,12 +134,15 @@ const GlobalTempContainer = () => {
 					Tillbaka
 				</button>
 			</Link>
+			{/* en container div för att visa knapparna som justerar storleken på typsnittet */}
 			<div className="btnWrapper">
 				<p>Justera storleken på texterna</p>
+				{/* en knapp för att förstora texterna */}
 				<button className="resizeUp" onClick={() => setFontSize(fontSize + 1)}>
 					{' '}
 					+{' '}
 				</button>
+				{/* en knapp för att minska texterna */}
 				<button
 					className="resizeDown"
 					onClick={() => setFontSize(fontSize - 1)}
@@ -145,11 +151,13 @@ const GlobalTempContainer = () => {
 					-{' '}
 				</button>
 			</div>
+			{/* använder en div för att omfamna de texter som ska kunna justeras med knapparna */}
 			<div
 				style={{
 					fontSize: `${fontSize}px`,
 				}}
 			>
+				{/* visar olika textkomponenter, fyller dem med innehåll från objekten ovan */}
 				<InfoBoxText blogs={GlobalTempIntro} />
 				<InfoBoxList blogs={GlobalTempList} />
 			</div>
@@ -169,9 +177,17 @@ const GlobalTempContainer = () => {
 				medeltemperaturavvikelser i grader Celsius i förhållande till en
 				basperiod.
 			</p>
+			{/* visar linjediagrammet om co2 */}
 			<GlobalTemperatureData />
+			{/* title för nästa sektion, funktionen för att jämföra årtal */}
 			<h3 className="margin1">Jämför årtal</h3>
+			{/* en div som visar de två stapeldiagrammen */}
+			{/* namngiven Pie1 för att kunna fylla den med rätt data,
+                kopplar den till det första året som hittades på användarens sökning */}
 			<div className="App compareBars">
+				{/* visar stapeldiagrammet */}
+				{/* namngiven Pie2 för att kunna fylla den med rätt data,
+                    kopplar den till det första året som hittades på användarens sökning, */}
 				<GlobalTemperatureCompareBarChart
 					chartName="Pie1"
 					GlobaltemperatureEmission={GlobaltemperatureEmission[indexYear1]}
@@ -190,15 +206,17 @@ const GlobalTempContainer = () => {
 			>
 				<InfoBoxText blogs={GlobalTempInformation} />
 			</div>
-
+			{/* använder en div för att omfamna de texter som ska kunna justeras med knapparna */}
 			<div
 				style={{
 					fontSize: `${fontSize}px`,
 				}}
 			>
+				{/* visar olika textkomponenter, fyller dem med innehåll från objekten ovan */}
 				<InfoBoxText blogs={GlobalTempEnding} />
 				<InfoBoxList blogs={GlobalTempImpact} />
 			</div>
+			{/* använder link för att gå tillbaka till startsidan */}
 			<Link to="/">
 				<button type="button" className="show btn btn-outline-dark customBTN">
 					<span className="btnIcon-Left">

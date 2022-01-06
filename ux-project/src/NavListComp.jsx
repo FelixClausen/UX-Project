@@ -73,26 +73,14 @@ function NavListComp() {
 				{/* Uses "Routes" to contain paths */}
 				<Routes>
 					{/* Sätter "path" -> Visar valda komponenter,
-              en länk route till varje container komponent per ämne */}
+                        en länk route till varje container komponent per ämne */}
 					{/* "/" för att börja på en tom länk */}
-					<Route path="/" element={<IndexCardWrapper />}>
-						{' '}
-					</Route>
-					<Route path="/workshop" element={<WorkShop />}>
-						{' '}
-					</Route>
-					<Route path="/fossil" element={<InfoBox />}>
-						{' '}
-					</Route>
-					<Route path="/havsniva" element={<SeaLevelsContainer />}>
-						{' '}
-					</Route>
-					<Route path="/global" element={<GlobalTempContainer />}>
-						{' '}
-					</Route>
-					<Route path="/glaciar" element={<GlazierSizeContainer />}>
-						{' '}
-					</Route>
+					<Route path="/" element={<IndexCardWrapper />}></Route>
+					<Route path="/workshop" element={<WorkShop />}></Route>
+					<Route path="/fossil" element={<InfoBox />}></Route>
+					<Route path="/havsniva" element={<SeaLevelsContainer />}></Route>
+					<Route path="/global" element={<GlobalTempContainer />}></Route>
+					<Route path="/glaciar" element={<GlazierSizeContainer />}></Route>
 				</Routes>
 			</div>
 		</Router>

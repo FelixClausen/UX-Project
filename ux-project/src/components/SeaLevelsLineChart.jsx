@@ -1,47 +1,61 @@
 // react + komponenter från recharts
 import React, { Component } from 'react';
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  CartesianGrid
+	LineChart,
+	Line,
+	XAxis,
+	YAxis,
+	Tooltip,
+	Legend,
+	ResponsiveContainer,
+	CartesianGrid,
 } from 'recharts';
 
 // en class komponent för att visa diagrammet
 export default class SeaLevelsData extends Component {
-  render() {
-    return (
-		// en container för diagrammet
-      <ResponsiveContainer width="100%" height="100%">
-		  {/* ett linjediagram importerat från recharts */}
-		{/* ihop kopplat med datan från API genom data={array name} */}
-        <LineChart
-          data={seaData}
-          margin={{
-            top: 0,
-            right: 5,
-            left: -20,
-            bottom: -25,
-          }}
-        >
-			{/* sätter linjer på diagrammet */}
-          <CartesianGrid strokeDasharray="3 3" />
-		  {/* så att x-axeln visar time */}
-          <XAxis dataKey="Time" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-		  {/* visar två (2) linjer som representerar varje data */}
-          <Line type="monotone" dataKey="GMSL" stroke="black" strokeWidth={2} dot={false} />
-          <Line type="monotone" name="kumulativa förändringar" dataKey="GMSL uncertainty" stroke="green" strokeWidth={2} dot={false} />
-        </LineChart>
-      </ResponsiveContainer>
-    );
-  }
+	render() {
+		return (
+			// en container för diagrammet
+			<ResponsiveContainer width="100%" height="100%">
+				{/* ett linjediagram importerat från recharts */}
+				{/* ihop kopplat med datan från API genom data={array name} */}
+				<LineChart
+					data={seaData}
+					margin={{
+						top: 0,
+						right: 5,
+						left: -20,
+						bottom: -25,
+					}}
+				>
+					{/* sätter linjer på diagrammet */}
+					<CartesianGrid strokeDasharray="3 3" />
+					{/* så att x-axeln visar time */}
+					<XAxis dataKey="Time" />
+					<YAxis />
+					{/* lägger till en tooltip från recharts för att kunna visa exakta värden i linjegrafen på muspekaren */}
+					<Tooltip />
+					<Legend />
+					{/* visar två (2) linjer som representerar varje data */}
+					<Line
+						type="monotone"
+						dataKey="GMSL"
+						stroke="black"
+						strokeWidth={2}
+						dot={false}
+					/>
+					<Line
+						type="monotone"
+						name="kumulativa förändringar"
+						dataKey="GMSL uncertainty"
+						stroke="green"
+						strokeWidth={2}
+						dot={false}
+					/>
+				</LineChart>
+			</ResponsiveContainer>
+		);
+	}
 }
 
 // en array med all data från API

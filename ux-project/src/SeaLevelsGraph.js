@@ -1,5 +1,5 @@
 // react
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 // css
 import './App.css';
@@ -9,12 +9,13 @@ import SeaLevelsData from './components/SeaLevelsLineChart';
 
 // class function to render graph
 class SeaLevelsChart extends Component {
-  render () {
-    return (
-      <div className="Graph">
-        <SeaLevelsData />
-      </div>
-    );
-  }
+	render() {
+		return (
+			// en div för att omfamna graf komponenten
+			<div className="Graph">
+				<SeaLevelsData />
+			</div>
+		);
+	}
 }
 export default SeaLevelsChart;

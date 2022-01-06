@@ -10,12 +10,14 @@ import peopleAtLecture from './images/peopleAtLecture.jpg';
 // components
 import BookingForm from './form';
 
+// container komponent
 const WorkShop = () => {
 	return (
 		<div>
 			<div className="workshopIntro">
 				<h1 className="wsTitle">Workshops</h1>
 				<div className="flex wsReverse">
+					{/* text om som förklarar vad workshops är */}
 					<div className="wsText">
 						<h3>
 							Workshop är en sammanställning av likasinnade som vill lära sig
@@ -28,6 +30,7 @@ const WorkShop = () => {
 						</p>
 					</div>
 					<div>
+						{/* en bild för att snygga till samt ge användaren någon form av exempel */}
 						<img
 							src={peopleAtLecture}
 							alt="personer som deltar i en workshop"
@@ -37,11 +40,10 @@ const WorkShop = () => {
 				</div>
 				<p className="welcome">Välkommen!</p>
 			</div>
+			{/* ett formulär för att boka in sig på workshops */}
 			<BookingForm />
 		</div>
 	);
 };
 
 export default WorkShop;
-
-console.log('hello ?');

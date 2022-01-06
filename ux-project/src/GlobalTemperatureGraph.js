@@ -1,5 +1,5 @@
 // react
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 // css
 import './App.css';
@@ -9,12 +9,13 @@ import GlobalTemperature from './components/GlobalTemperatureLineChart';
 
 // class function to render graph
 class GlobalTemperatureChart extends Component {
-  render () {
-    return (
-      <div className="Graph">
-        <GlobalTemperature />
-      </div>
-    );
-  }
+	render() {
+		return (
+			// en div för att omfamna graf komponenten
+			<div className="Graph">
+				<GlobalTemperature />
+			</div>
+		);
+	}
 }
 export default GlobalTemperatureChart;

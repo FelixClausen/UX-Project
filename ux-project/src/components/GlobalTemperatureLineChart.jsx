@@ -1,51 +1,59 @@
 // react + komponenter från recharts
 import React, { Component } from 'react';
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  CartesianGrid
+	LineChart,
+	Line,
+	XAxis,
+	YAxis,
+	Tooltip,
+	Legend,
+	ResponsiveContainer,
+	CartesianGrid,
 } from 'recharts';
 
 // en class komponent för att visa diagrammet
 export default class GlobalTemperatureData extends Component {
-  render() {
-    return (
-	  // en container för diagrammet
-      <ResponsiveContainer width="100%" height="100%">
-	    {/* ett linjediagram importerat från recharts */}
-		{/* ihop kopplat med datan från API genom data={array name} */}
-        <LineChart
-          data={globaltemperatureData}
-          margin={{
-            top: 0,
-            right: 5,
-            left: -20,
-            bottom: -25,
-          }}
-        >
-		  {/* sätter linjer på diagrammet */}
-          <CartesianGrid strokeDasharray="3 3" />
-		  {/* så att x-axeln visar year */}
-          <XAxis dataKey="Year" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          {/*
+	render() {
+		return (
+			// en container för diagrammet
+			<ResponsiveContainer width="100%" height="100%">
+				{/* ett linjediagram importerat från recharts */}
+				{/* ihop kopplat med datan från API genom data={array name} */}
+				<LineChart
+					data={globaltemperatureData}
+					margin={{
+						top: 0,
+						right: 5,
+						left: -20,
+						bottom: -25,
+					}}
+				>
+					{/* sätter linjer på diagrammet */}
+					<CartesianGrid strokeDasharray="3 3" />
+					{/* så att x-axeln visar year */}
+					<XAxis dataKey="Year" />
+					<YAxis />
+					{/* lägger till en tooltip från recharts för att kunna visa exakta värden i linjegrafen på muspekaren */}
+					<Tooltip />
+					<Legend />
+					{/*
             vi har problem här, den hämtar bara ett årtal.
             Detta gör att den skriver ut samma värde för "Mean", den ska skriva ut både GCAG och GISTEMP.
             Behöver vi visa båda? haha
           */}
-		  {/* visar en linje som representerar varje data */}
-          <Line type="monotone" name='GCAG' dataKey="Mean" stroke="orange" strokeWidth={2} dot={false} />
-        </LineChart>
-      </ResponsiveContainer>
-    );
-  }
+					{/* visar en linje som representerar varje data */}
+					<Line
+						type="monotone"
+						name="GCAG"
+						dataKey="Mean"
+						stroke="orange"
+						strokeWidth={2}
+						dot={false}
+					/>
+				</LineChart>
+			</ResponsiveContainer>
+		);
+	}
 }
 
 // en array med all data från API

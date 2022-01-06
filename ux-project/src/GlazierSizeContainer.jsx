@@ -90,7 +90,7 @@ const GlazierSizeContainer = () => {
 	const [indexYear2, setIndexYear2] = useState(0);
 
 	useEffect(() => {
-		// använder useEffekt
+		// gets data from local file
 		setGlacierSizeEmission(getGlacierSizesdata());
 	}, []);
 
@@ -183,7 +183,7 @@ const GlazierSizeContainer = () => {
 			<div className="App compareBars">
 				{/* visar stapeldiagrammet */}
 				{/* namngiven Pie1 för att kunna fylla den med rätt data,
-            kopplar den till det första året som hittades på användarens sökning, */}
+            kopplar den till det första året som hittades på användarens sökning */}
 				<GlacierSizeCompareBarChart
 					chartName="Pie1"
 					GlacierSizeEmission={GlacierSizeEmission[indexYear1]}

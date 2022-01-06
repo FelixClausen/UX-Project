@@ -1,52 +1,67 @@
 // react + komponenter från recharts
 import React, { Component } from 'react';
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  CartesianGrid
+	LineChart,
+	Line,
+	XAxis,
+	YAxis,
+	Tooltip,
+	Legend,
+	ResponsiveContainer,
+	CartesianGrid,
 } from 'recharts';
 
 // en class komponent för att visa diagrammet
 export default class GlacierSizeData extends Component {
-  render() {
-    return (
-	  // en container för diagrammet
-      <ResponsiveContainer width="100%" height="100%">
-		{/* ett linjediagram importerat från recharts */}
-		{/* ihop kopplat med datan från API genom data={array name} */}
-        <LineChart
-          data={glacierData}
-          margin={{
-            top: 0,
-            right: 5,
-            left: -20,
-            bottom: -25,
-          }}
-        >
-		  {/* sätter linjer på diagrammet */}
-          <CartesianGrid strokeDasharray="3 3" />
-		  {/* så att x-axeln visar year */}
-          <XAxis dataKey="Year" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-		  {/* visar två linjer som representerar varje data */}
-          <Line type="monotone" name='Genomsnittlig kumulativ massbalans' dataKey="Mean cumulative mass balance" stroke="black" strokeWidth={2} dot={false} />
-          <Line type="monotone" name='Antal observationer' dataKey="Number of observations" stroke="green" strokeWidth={2} dot={false} />
-        </LineChart>
-      </ResponsiveContainer>
-    );
-  }
+	render() {
+		return (
+			// en container för diagrammet
+			<ResponsiveContainer width="100%" height="100%">
+				{/* ett linjediagram importerat från recharts */}
+				{/* ihop kopplat med datan från API genom data={array name} */}
+				<LineChart
+					data={glacierData}
+					margin={{
+						top: 0,
+						right: 5,
+						left: -20,
+						bottom: -25,
+					}}
+				>
+					{/* sätter linjer på diagrammet */}
+					<CartesianGrid strokeDasharray="3 3" />
+					{/* så att x-axeln visar year */}
+					<XAxis dataKey="Year" />
+					<YAxis />
+					{/* lägger till en tooltip från recharts för att kunna visa exakta värden i linjegrafen på muspekaren */}
+					<Tooltip />
+					<Legend />
+					{/* visar två linjer som representerar varje data */}
+					<Line
+						type="monotone"
+						name="Genomsnittlig kumulativ massbalans"
+						dataKey="Mean cumulative mass balance"
+						stroke="black"
+						strokeWidth={2}
+						dot={false}
+					/>
+					<Line
+						type="monotone"
+						name="Antal observationer"
+						dataKey="Number of observations"
+						stroke="green"
+						strokeWidth={2}
+						dot={false}
+					/>
+				</LineChart>
+			</ResponsiveContainer>
+		);
+	}
 }
 
 // en array med all data från API
 const glacierData = [
-  {
+	{
 		'Mean cumulative mass balance': 0.0,
 		'Number of observations': null,
 		Year: 1945,

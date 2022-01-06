@@ -23,7 +23,6 @@ const IndexCardWrapper = () => {
 			title: 'Fossila bränslen',
 			body: 'Fossila bränslen är kol, olja och naturgas. När vi bränner dem får vi energi. Samtidigt bildas koldioxid.',
 			img: fossilabränslenhamn,
-			id: 1,
 		},
 	]);
 
@@ -32,7 +31,6 @@ const IndexCardWrapper = () => {
 			title: 'Havsnivån',
 			body: 'Havsnivån är en term som används för att beskriva vad havets höjd vanligtvis är och den är aldrig permanent.',
 			img: seaLevels,
-			id: 2,
 		},
 	]);
 
@@ -41,7 +39,6 @@ const IndexCardWrapper = () => {
 			title: 'Global uppvärmning',
 			body: 'Global uppvärmning är temperaturen på jordens yta, hav och atmosfär som stiger över tiotusentals år.',
 			img: globalTemperature,
-			id: 3,
 		},
 	]);
 
@@ -50,7 +47,6 @@ const IndexCardWrapper = () => {
 			title: 'Glaciärer',
 			body: 'En glaciär är en stor kropp av is och snö. Det bildas eftersom snön i ett område inte smälter på sommaren.',
 			img: glaciersSize,
-			id: 4,
 		},
 	]);
 
