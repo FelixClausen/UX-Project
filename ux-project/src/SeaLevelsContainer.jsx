@@ -43,8 +43,8 @@ const SeaLevelsContainer = () => {
   const [seaLevelsImpact] = useState([
     { title: 'Gör påverkan själv...',
       li_1: 'Välj förnybara energikällor',
-      li_2: 'Tips nummer två',
-      li_3: 'Tips nummer tre',
+      li_2: 'Lämna bilen hemma, åk kommunalt eller cykel',
+      li_3: 'Skydda våtmarker',
       img: sealevelsFive,
     },
   ])
@@ -61,7 +61,7 @@ const SeaLevelsContainer = () => {
   // redigera denna för att ändra den andra text blocket
   const [seaLevelsInformation] = useState([
     { title: 'Mer om havsnivåer',
-      body: 'Mellan år 1900 och 1970 så har vattennivån stigit ca 1 mm per år fram tills de senaste tio åren då vattennivån istället stigit med nästan 4 mm per år.',
+      body: 'Mellan år 1900 och 1970 så har vattennivån stigit ca 1 mm per år fram tills de senaste tio åren då vattennivån istället stigit med nästan 4 mm per år. Den stigande vattennivån beror mest på en kombination av smältvatten från glaciärer och inlandsisar och termisk expansion av havsvatten när det värms upp.',
       img: sealevelsTwo,
       id: 2
     },
@@ -70,7 +70,7 @@ const SeaLevelsContainer = () => {
   // redigera denna för att ändra den tredje text blocket
   const [seaLevelsEnding] = useState([
     { title: 'Framtida havsnivåer',
-      body: 'Om vattennivåerna fortsätter att öka som de gjort de senaste åren så beräknas de ha stigit upp till 43cm år 2100.',
+      body: 'Om den globala temperaturen fortsätter att värmas kommer havsnivån att fortsätta att stiga. Hur mycket den kommer att öka beror mest på takten för framtida koldioxidutsläpp och framtida global uppvärmning. Hur snabbt den kommer att stiga beror mest på hur snabbt glaciären och inlandsisen smälter. Om vattennivåerna fortsätter att öka som de gjort de senaste åren så beräknas de ha stigit upp till 43cm år 2100.',
       img: sealevelsFour,
       id: 2
     },
