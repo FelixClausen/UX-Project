@@ -108,10 +108,11 @@ const SeaLevelsContainer = () => {
 					setIndexTime2(index);
 					break;
 			}
-		} else {
+		}
+		/*else {
 			// om inget hittades, visa felmeddelande
 			alert('Data från önskade årtalet finns inte ');
-		}
+		}*/
 	};
 	// funktion för att ändra storlek på typsnittet
 	// sätter storleken på 12px
@@ -181,11 +182,11 @@ const SeaLevelsContainer = () => {
 			<h3 className="margin1">Jämför årtal</h3>
 			{/* en div som visar de två stapeldiagrammen */}
 			{/* namngiven Pie1 för att kunna fylla den med rätt data,
-          kopplar den till det första året som hittades på användarens sökning */}
+                kopplar den till det första året som hittades på användarens sökning */}
 			<div className="App compareBars">
 				{/* visar stapeldiagrammet */}
 				{/* namngiven Pie2 för att kunna fylla den med rätt data,
-            kopplar den till det första året som hittades på användarens sökning, */}
+                    kopplar den till det första året som hittades på användarens sökning, */}
 				<SeaLevelCompareBarChart
 					chartName="Pie1"
 					SeaLevelEmission={SeaLevelEmission[indexTime1]}

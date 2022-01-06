@@ -10,16 +10,20 @@ import {
 	CartesianGrid,
 } from 'recharts';
 
-// funktion för att jämföra årtal
-const SeaLevelCompareBarChart = (props) => {
-	// runs handleYear based on "Enter" key pressed + value
-	const handleTime = (e) => {
+/*
+const handleTime = (e) => {
 		if (e.key === 'Enter') {
 			props.onTimeFilter(props.chartName, e.target.value);
 		}
 	};
+*/
 
-	// sets Co2Emission to co2
+// funktion för att jämföra årtal
+const SeaLevelCompareBarChart = (props) => {
+	function handleTime(e) {
+		props.onTimeFilter(props.chartName, e.target.value);
+	}
+
 	let sl = props.SeaLevelEmission;
 	// om datan är undifined visas ett felmeddelande
 	if (sl === undefined) return <p>There is no data.</p>;
@@ -44,10 +48,15 @@ const SeaLevelCompareBarChart = (props) => {
 				<input
 					type="text"
 					placeholder="1999"
-					onKeyDown={(e) => handleTime(e)}
+					maxlength="4"
+					pattern="\d{4}"
+					required
+					onChange={(e) => handleTime(e)}
 				/>
 				{/* vid klick på knappen ska årtal hittas */}
-				<button>Jämför</button>
+				<button type="button" onClick={(e) => handleTime(e)}>
+					Sök
+				</button>
 			</div>
 			{/* användaren barChart från recharts,
                 kopplat till rätt data genom GLdataBarChart */}
