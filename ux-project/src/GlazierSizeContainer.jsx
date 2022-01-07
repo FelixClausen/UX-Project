@@ -110,10 +110,10 @@ const GlazierSizeContainer = () => {
 					setIndexYear2(index);
 					break;
 			}
-		} else {
+		} /*else {
 			// om inget hittades, visa felmeddelande
 			alert('Data från önskade årtalet finns inte ');
-		}
+		}*/
 	};
 	// funktion för att ändra storlek på typsnittet
 	// sätter storleken på 12px
@@ -164,6 +164,7 @@ const GlazierSizeContainer = () => {
 				<InfoBoxText blogs={GlacierSizeIntro} />
 				<InfoBoxList blogs={GlacierSizeList} />
 			</div>
+			{/* title och text som beskriver vad statistiken mäts i */}
 			<h1>Historisk statistik om världens glaciärer</h1>
 			<p className="margin1">
 				Genomsnittlig kumulativ massbalans för "referensglaciärer" över hela
@@ -179,6 +180,17 @@ const GlazierSizeContainer = () => {
 			<GlazierSizeData />
 			{/* title för nästa sektion, funktionen för att jämföra årtal */}
 			<h3 className="margin1">Jämför årtal</h3>
+			{/* texter för att förklara kort hur användaren ska göra en sökning */}
+			<p className="margin1">
+				Statistik finns endast tillgänglig mellan årtalen 1945 och 2014
+			</p>
+			<p className="margin1">
+				För att söka årtal, skriv in årtalet i sökrutan, t.ex 1899
+			</p>
+			<p className="margin1">
+				Om du vill kolla på ett nytt årtal, radera det första och skriv in ditt
+				nya
+			</p>
 			{/* en div som visar de två stapeldiagrammen */}
 			<div className="App compareBars">
 				{/* visar stapeldiagrammet */}

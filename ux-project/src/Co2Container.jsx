@@ -32,7 +32,7 @@ const InfoBox = () => {
 	const [fossilFuelsIntro] = useState([
 		{
 			title: 'Fossila bränslen',
-			body: 'Fossila bränslen är olika energikällor i form av kolväten, som kommer från äldre geologiska perioder, och som kan påträffas på eller under marken i lito- och pedosfären. Enligt den biogeniska teorin, som är förhärskande idag, utgörs de fossila bränslena av rester av forntida djur och växter som bäddats ner i jorden och sedan under högt tryck och värme brutits ner till sina beståndsdelar (huvudsakligen kol och kolföreningar). Enligt den abiogeniska teorin utgörs de fossila bränslena av resultaten av kemiska processer under jordens forntid.',
+			body: 'Fossila bränslen består utav organisk kol- och väteföreningar. Dessa hittas främst i växter och djur som legat dött i sediment eller bergrunder i miljontals år. Dessa har sedan legat under hög temperatur och trygg vilket gjort att det sakta omvandlats till kol, olja och gas. Fossila bränslen är den största boven till klimatförändningar på grund utav sitt utsläpp av växthusgaser, då det allra vanligaste är bensin, diesel och naturgas. För att bespara miljön krävs omställning. Övergång till förnybar energi som biobränslen eller sol och vind framtagen energi är en mer hållbar lösning.',
 			img: fossilFuel,
 			id: 1,
 		},
@@ -42,8 +42,8 @@ const InfoBox = () => {
 	// ett obejkt för att anpassa text innehållet i återanvända komponenter
 	const [fossilFuelsInformation] = useState([
 		{
-			title: 'Olika varianter',
-			body: 'De fossila bränslena omfattar främst naturgas, petroleum och kol. Naturgas består huvudsakligen av gasen metan och har ett högt innehåll av grundämnet väte jämfört med grundämnet kol. Metan finns i naturgasfält tillsammans med råolja eller bundet som metanklatrat. Petroleum (även kallad råolja) påträffas i vätskeform och innehåller en större mängd av grundämnet kol, medan de icke-flyktiga bergarterna som också kallas kol (ej att förväxla med grundämnet kol) innehåller en mycket stor mängd av grundämnet kol.',
+			title: 'En globalpåverkan',
+			body: 'Varför är då fossila bränslen så dåligt? Jo, vid användningen av fossila bränslen så bildas koldioxid. Förbärnningen släpper också ut miljö- och hälsoskadliga ämnen, såsom svaveldioxid och kväveoxider, vilket bidrar till växthuseffekten. Växhuseffekten bidrar i sin tur till en ökad risk för naturkatastrofer. Men alla fossila bränseln är inte lika dåliga. Det har visat sig att olika bränslen sälpper ut olika mängder koldioxid. Kol har till exempel ett  högre koldoxid utsläpp per energienhet än oljeprodukter som bensin och diesel. Någonting som är viktigt att tänka på för att bygga en hållbar framtid.',
 			img: fossilabränslenindustri,
 			id: 1,
 		},
@@ -53,7 +53,7 @@ const InfoBox = () => {
 	const [fossilFuelsEnding] = useState([
 		{
 			title: 'Framtida fossila bränseln',
-			body: 'Enligt den biogeniska teorin bildades jordens petroleumtillgångar då förhistoriska alger och plankton samt andra växter och döda djur lagt sig på sjö- och havsbottnar under syrefria förhållanden. Detta organiska material har begravts under tjocka lager sediment. Genom högt tryck och hög temperatur har det omvandlats kemiskt, först till kerogen och sedan genom ytterligare tryck och värme till kolväten i vätske- eller gasform (det vill säga naturgas och petroleum). ',
+			body: 'I en mer hållbar framtid är naturgas och biogas att föredra. Fördelen med naturgas är att den kan utvinnas med en ren förbränning, vilket resulterar i låga utsläpp av miljö- och hälsoskadliga ämnen. Biogas argumenteras vara ännu bättre än naturgas på grund utav sitt förnybara ursprung, vilket är mer hållbart i längden.',
 			img: fossilabränslenhamn,
 			id: 1,
 		},
@@ -63,9 +63,9 @@ const InfoBox = () => {
 	const [fossilFuelsList] = useState([
 		{
 			title: 'Visste du att...',
-			li_1: 'När fossila bränslen förbränns släpper de ut ohälsosamma gifter i luften vi andas',
-			li_2: 'Fossila bränslen är icke-förnybara, vilket innebär att de inte kan tillverkas av människor',
-			li_3: 'Cirka 90 % av vår energi kommer från fossila bränslen',
+			li_1: 'När fossila bränslen förbränns släpper de ut ohälsosamma gifter i luften vi andas,',
+			li_2: 'Fossila bränslen är icke-förnybara, vilket innebär att de inte kan tillverkas av människor,',
+			li_3: 'Cirka 90 % av vår energi kommer från fossila bränslen.',
 			img: fossilabränslenfossil,
 		},
 	]);
@@ -106,10 +106,10 @@ const InfoBox = () => {
 					setIndexYear2(index);
 					break;
 			}
-		} else {
+		} /*else {
 			// om inget hittades, visa felmeddelande
 			alert('Data från önskade årtalet finns inte ');
-		}
+		}*/
 	};
 	// funktion för att ändra storlek på typsnittet
 	// sätter storleken på 12px
@@ -160,6 +160,7 @@ const InfoBox = () => {
 				<InfoBoxText blogs={fossilFuelsIntro} />
 				<InfoBoxList blogs={fossilFuelsList} />
 			</div>
+			{/* title och text som beskriver vad statistiken mäts i */}
 			<h1>Historisk statistik på fossila bränslen</h1>
 			<p className="margin1">
 				Statistiken representerar de fyra vanligaste varianterna av fossila
@@ -175,6 +176,17 @@ const InfoBox = () => {
 			<Graph />
 			{/* title för nästa sektion, funktionen för att jämföra årtal */}
 			<h3 className="margin1">Jämför årtal</h3>
+			{/* texter för att förklara kort hur användaren ska göra en sökning */}
+			<p className="margin1">
+				Statistik finns endast tillgänglig mellan årtalen 1801 och 2010
+			</p>
+			<p className="margin1">
+				För att söka årtal, skriv in årtalet i sökrutan, t.ex 1899
+			</p>
+			<p className="margin1">
+				Om du vill kolla på ett nytt årtal, radera det första och skriv in ditt
+				nya
+			</p>
 			{/* en div som visar de två stapeldiagrammen */}
 			{/* namngiven Pie1 för att kunna fylla den med rätt data,
                 kopplar den till det första året som hittades på användarens sökning */}

@@ -12,16 +12,15 @@ import {
 
 // funktion för att jämföra årtal
 const GlacierSizeCompareBarChart = (props) => {
-	// runs handleYear based on "Enter" key pressed + value
-	const handleYear = (e) => {
-		if (e.key === 'Enter') {
-			props.onYearFilter(props.chartName, e.target.value);
-		}
-	};
+	// handleYear hämtar värdet som finns i input för att sedan filtera och hitta rätt årtal
+	// handleYear körs sedan när input ändras
+	function handleYear(e) {
+		props.onYearFilter(props.chartName, e.target.value);
+	}
 
-	// sets Co2Emission to co2
+	// identifierar datan
 	let gl = props.GlacierSizeEmission;
-	// om datan är undifined visas ett felmeddelande
+	// om datan är undifined visas ett felmeddelande istället för barChart
 	if (gl === undefined) return <p>There is no data.</p>;
 
 	//object array
@@ -45,14 +44,18 @@ const GlacierSizeCompareBarChart = (props) => {
 		// en container komponent
 		<div className="barBox">
 			<div>
-				{/* använder en input för att kunna skriva årtalet */}
+				{/* använder en input för att kunna skriva årtalet
+				    kör funktionen handleYear.
+					maxlength används för att minimera fel användaren kan göra */}
 				<input
+					min="1882"
 					type="text"
 					placeholder="1999"
-					onKeyDown={(e) => handleYear(e)}
+					maxLength="4"
+					pattern="\d{4}"
+					required
+					onChange={(e) => handleYear(e)}
 				/>
-				{/* vid klick på knappen ska årtal hittas */}
-				<button onclick={(e) => handleYear(e)}>Jämför</button>
 			</div>
 			{/* användaren barChart från recharts,
                 kopplat till rätt data genom GLdataBarChart */}

@@ -108,10 +108,10 @@ const GlobalTempContainer = () => {
 					setIndexYear2(index);
 					break;
 			}
-		} else {
+		} /*else {
 			// om inget hittades, visa felmeddelande
 			alert('Data från önskade årtalet finns inte ');
-		}
+		}*/
 	};
 	// funktion för att ändra storlek på typsnittet
 	// sätter storleken på 12px
@@ -161,6 +161,7 @@ const GlobalTempContainer = () => {
 				<InfoBoxText blogs={GlobalTempIntro} />
 				<InfoBoxList blogs={GlobalTempList} />
 			</div>
+			{/* title och text som beskriver vad statistiken mäts i */}
 			<h1 className="DiagramTitle">
 				Historisk statistik på global uppvärmning
 			</h1>
@@ -177,10 +178,21 @@ const GlobalTempContainer = () => {
 				medeltemperaturavvikelser i grader Celsius i förhållande till en
 				basperiod.
 			</p>
-			{/* visar linjediagrammet om co2 */}
+			{/* visar linjediagrammet om global uppvärmning */}
 			<GlobalTemperatureData />
 			{/* title för nästa sektion, funktionen för att jämföra årtal */}
 			<h3 className="margin1">Jämför årtal</h3>
+			{/* texter för att förklara kort hur användaren ska göra en sökning */}
+			<p className="margin1">
+				Statistik finns endast tillgänglig mellan årtalen 1880 och 2016
+			</p>
+			<p className="margin1">
+				För att söka årtal, skriv in årtalet i sökrutan, t.ex 1899
+			</p>
+			<p className="margin1">
+				Om du vill kolla på ett nytt årtal, radera det första och skriv in ditt
+				nya
+			</p>
 			{/* en div som visar de två stapeldiagrammen */}
 			{/* namngiven Pie1 för att kunna fylla den med rätt data,
                 kopplar den till det första året som hittades på användarens sökning */}

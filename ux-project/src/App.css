@@ -238,16 +238,15 @@
 }
 
 /* ----- Bars -----*/
-.barBox {
-	margin-top: -2rem;
-	text-align: right;
-}
-
 .barBox input {
 	height: 30px;
 	border: 1px solid #181818;
 	border-radius: 4px;
-	padding-left: 10px;
+	padding-left: 25px;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	width: 80px;
+	margin-left: 48%;
 }
 
 .barBox button {
@@ -311,7 +310,7 @@
 	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10rem;
+	margin-top: 5rem;
 }
 
 .workshopIntro h1 {

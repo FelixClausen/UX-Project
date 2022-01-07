@@ -163,6 +163,7 @@ const SeaLevelsContainer = () => {
 				<InfoBoxText blogs={seaLevelsIntro} />
 				<InfoBoxList blogs={seaLevelsList} />
 			</div>
+			{/* title och text som beskriver vad statistiken mäts i */}
 			<h1 className="DiagramTitle">Historisk statistik om havsnivåer</h1>
 			<p className="margin1">
 				{' '}
@@ -176,10 +177,22 @@ const SeaLevelsContainer = () => {
 				GMSL står för Global Mean Sea Level.{' '}
 			</p>
 			<p className="margin1"> Y-axeln representerar meter. </p>
-			{/* visar linjediagrammet om co2 */}
+			{/* visar linjediagrammet om data om havsnivåer */}
+
 			<SeaLevelsData />
 			{/* title för nästa sektion, funktionen för att jämföra årtal */}
 			<h3 className="margin1">Jämför årtal</h3>
+			{/* texter för att förklara kort hur användaren ska göra en sökning */}
+			<p className="margin1">
+				Statistik finns endast tillgänglig mellan årtalen 1880 och 2013
+			</p>
+			<p className="margin1">
+				För att söka årtal, skriv in årtalet i sökrutan, t.ex 1899
+			</p>
+			<p className="margin1">
+				Om du vill kolla på ett nytt årtal, radera det första och skriv in ditt
+				nya
+			</p>
 			{/* en div som visar de två stapeldiagrammen */}
 			{/* namngiven Pie1 för att kunna fylla den med rätt data,
                 kopplar den till det första året som hittades på användarens sökning */}

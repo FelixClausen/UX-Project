@@ -7,8 +7,7 @@ export const BookingForm = () => {
 	return (
 		<div className="form-container">
 			<h1>Delta i workshops</h1>
-			<h2>Rubrik</h2>
-			<h6>1. Fyll i dina uppgifter</h6>
+			<h4>1. Fyll i dina uppgifter</h4>
 
 			<div className="rowContainer">
 				<Form>
@@ -54,7 +53,7 @@ export const BookingForm = () => {
 						</Form.Group>
 					</div>
 
-					<h6 id="pickSubject">2. Välj ämne</h6>
+					<h4 id="pickSubject">2. Välj ämne</h4>
 					<div className="d-flex justify-content-between">
 						<p className="pickSubject2">Välj ämne</p>
 						<p id="pickDate">Välj datum</p>
@@ -76,7 +75,7 @@ export const BookingForm = () => {
 					</div>
 
 					<Form.Group className="mb-3" controlId="formBasicNews">
-						<h6 id="stepThree">3. Avslut</h6>
+						<h4 id="stepThree">3. Avslut</h4>
 						<Form.Label id="newsUpdate">
 							Vill du bli uppdaterad med nyhetsbrev?
 						</Form.Label>
