@@ -19,19 +19,19 @@ export const BookingForm = () => {
 
 						<Form.Group className="mb-3" controlId="formBasicLastname">
 							<Form.Label>Efternamn</Form.Label>
-							<Form.Control type="password" placeholder="Åkesson" />
+							<Form.Control type="email" placeholder="Åkesson" />
 						</Form.Group>
 					</div>
 
 					<div className="d-flex justify-content-between">
 						<Form.Group className="mb-3" controlId="formBasicTelephone">
 							<Form.Label>Telefon</Form.Label>
-							<Form.Control type="password" placeholder="+46 123 456 78" />
+							<Form.Control type="email" placeholder="+46 123 456 78" />
 						</Form.Group>
 
 						<Form.Group className="mb-3" controlId="formBasicTelephoneRepeat">
 							<Form.Label>Bekräfta telefon</Form.Label>
-							<Form.Control type="password" placeholder="+46 123 456 78" />
+							<Form.Control type="email" placeholder="+46 123 456 78" />
 						</Form.Group>
 					</div>
 
@@ -39,7 +39,7 @@ export const BookingForm = () => {
 						<Form.Group className="mb-3" controlId="formBasicEmail">
 							<Form.Label>E-post</Form.Label>
 							<Form.Control
-								type="password"
+								type="email"
 								placeholder="Skriv in din e-postadress"
 							/>
 						</Form.Group>
@@ -47,7 +47,7 @@ export const BookingForm = () => {
 						<Form.Group className="mb-3" controlId="formBasicEmailRepeat">
 							<Form.Label>Bekräfta e-post</Form.Label>
 							<Form.Control
-								type="password"
+								type="email"
 								placeholder="Skriv in din e-postadress igen"
 							/>
 						</Form.Group>
