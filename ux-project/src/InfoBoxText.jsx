@@ -20,7 +20,7 @@ const InfoBoxText = ({ blogs }) => {
 						<img
 							className="InfoBoxImage rounded float-right"
 							src={blog.img}
-							alt="alt"
+							alt="bild på klimat"
 						></img>
 					</div>
 				))}

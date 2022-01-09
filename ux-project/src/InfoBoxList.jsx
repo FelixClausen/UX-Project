@@ -17,7 +17,7 @@ const InfoBoxList = ({ blogs }) => {
 					<img
 						src={blog.img}
 						className="InfoBoxListImage rounded float-right"
-						alt="..."
+						alt="bild på klimat"
 					></img>
 					<div className="InfoBoxTextWrapper">
 						{/* text om relevant ämne */}
