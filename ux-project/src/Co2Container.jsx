@@ -106,10 +106,7 @@ const InfoBox = () => {
 					setIndexYear2(index);
 					break;
 			}
-		} /*else {
-			// om inget hittades, visa felmeddelande
-			alert('Data från önskade årtalet finns inte ');
-		}*/
+		}
 	};
 	// funktion för att ändra storlek på typsnittet
 	// sätter storleken på 12px

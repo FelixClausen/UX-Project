@@ -23,16 +23,8 @@ const GlobalTemperatureCompareBarChart = (props) => {
 	// om datan är undifined visas ett felmeddelande istället för barChart
 	if (gt === undefined) return <p>There is no data.</p>;
 
-	//object array
-	/*
-  vi har problem här, den hämtar bara ett årtal.
-  Detta gör att den skriver ut samma värde för "Mean", den ska skriva ut både GCAG och GISTEMP.
-  */
 	// objektet är kopplat till GCAG
-	const GTdataBarChart = [
-		{ name: 'GCAG', GT: gt['Mean'] },
-		//{ name: 'GISTEMP', GT: gt['Mean'] },
-	];
+	const GTdataBarChart = [{ name: 'GCAG', GT: gt['Mean'] }];
 
 	// identifierar lite färger för att använda dem senare på staplarnas färg, enbart två eftersom det bara är två bars
 	const COLORS = ['#0088FE', '#00C49F'];

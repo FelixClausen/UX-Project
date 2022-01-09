@@ -1,5 +1,4 @@
 // react
-import { Link } from 'react-router-dom';
 import React from 'react';
 
 // css
@@ -8,11 +7,6 @@ import './responsive.css';
 
 // images
 import peopleAtLecture from './images/peopleAtLecture.jpg';
-import peopleAtLecture2 from './images/peopleAtLecture2.jpg';
-
-// icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 // components
 import BookingForm from './form';
