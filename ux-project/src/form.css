@@ -110,3 +110,9 @@
 .flexCol {
 	display: flex;
 }
+
+.form-container2 h3,
+.form-container2 p {
+	margin-left: 2rem;
+	max-width: 480px;
+}
