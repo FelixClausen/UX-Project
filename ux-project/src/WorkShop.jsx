@@ -8,6 +8,7 @@ import './responsive.css';
 
 // images
 import peopleAtLecture from './images/peopleAtLecture.jpg';
+import peopleAtLecture2 from './images/peopleAtLecture2.jpg';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,15 +20,7 @@ import BookingForm from './form';
 // container komponent
 const WorkShop = () => {
 	return (
-		<div className="customBTN">
-			<Link to="/">
-				<button type="button" className="show btn btn-outline-dark customBTN">
-					<span className="btnIcon-Left">
-						<FontAwesomeIcon icon={faChevronLeft} />
-					</span>
-					Tillbaka
-				</button>
-			</Link>
+		<div>
 			<div className="workshopIntro">
 				<h1 className="wsTitle">Workshops</h1>
 				<div className="flex wsReverse">
@@ -56,14 +49,6 @@ const WorkShop = () => {
 			</div>
 			{/* ett formulär för att boka in sig på workshops */}
 			<BookingForm />
-			<Link to="/">
-				<button type="button" className="show btn btn-outline-dark customBTN">
-					<span className="btnIcon-Left">
-						<FontAwesomeIcon icon={faChevronLeft} />
-					</span>
-					Tillbaka
-				</button>
-			</Link>
 		</div>
 	);
 };

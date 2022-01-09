@@ -20,6 +20,28 @@
 		width: 382px;
 		height: 398px;
 	}
+
+	.form-container {
+		width: 500px;
+		height: 1050px;
+	}
+
+	.flexCol {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	#formImg {
+		width: 450px;
+		height: 330px;
+		border-radius: 8px;
+		margin-left: -0rem;
+		margin-top: -0rem;
+	}
+
+	.rowContainer h4 {
+		margin-top: 2rem;
+	}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -162,6 +184,10 @@
 	.wsImg {
 		margin-top: 1rem;
 		margin-left: 10rem;
+	}
+
+	.form-container {
+		margin-bottom: 10rem;
 	}
 }
 

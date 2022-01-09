@@ -1,36 +1,17 @@
 .form-container {
-	border-style: none;
-	padding-top: 2em;
-	padding-left: 4em;
-	padding-right: 4em;
-	padding-bottom: 2em;
-	margin-bottom: 0em;
-	margin-top: 2em;
+	padding: 2rem;
 	margin-right: auto;
 	margin-left: auto;
 	background-color: #e8e8e8;
-}
-
-.form-container2 {
-	border-style: none;
-	padding-top: 0em;
-	padding-left: 4em;
-	padding-right: 4em;
-	padding-bottom: 2em;
-	background-color: #e8e8e8;
-	width: 520px;
+	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.15);
+	width: 1020px;
+	border-radius: 8px;
+	margin-top: 5rem;
+	margin-bottom: 10rem;
 }
 
 .rowContainer {
 	display: flex;
-	flex-direction: row;
-}
-.continue {
-	padding-right: 1em;
-}
-
-.sms {
-	margin-right: 2em;
 }
 
 .form-label {
@@ -67,10 +48,12 @@
 	border-style: none;
 	color: #222831;
 	width: 210px;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 #pickDate {
-	margin-right: 8.5em;
+	margin-right: 14.5rem;
 }
 
 #newsUpdate {
@@ -88,9 +71,42 @@
 #pickSubject {
 	margin-top: 1em;
 }
+#pickSubject2 {
+	margin-left: 1rem;
+}
 
-#waterImg {
-	width: 500px;
-	height: 400px;
-	padding-bottom: 15px;
+#formImg {
+	width: 480px;
+	height: 380px;
+	border-radius: 8px;
+	margin: 2rem;
+}
+
+.continue {
+	width: 10rem;
+	height: 3rem;
+	background-color: #495464;
+	color: #eee;
+	position: absolute;
+	border: 1px solid #181818;
+	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.continue:hover {
+	background-color: #eee;
+	color: #181818;
+	border-color: #181818;
+}
+
+.mb-3 {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.formIntro h1 {
+	margin-bottom: 2rem;
+}
+
+.flexCol {
+	display: flex;
 }
