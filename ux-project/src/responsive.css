@@ -21,6 +21,10 @@
 		height: 398px;
 	}
 
+	.card-text {
+		max-width: 230px;
+	}
+
 	.form-container {
 		width: 500px;
 		height: 1050px;
@@ -135,7 +139,7 @@
 
 	.card-text {
 		font-size: 1.1em;
-		max-width: 230px;
+		max-width: 240px;
 	}
 
 	.Graph {
